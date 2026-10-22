@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "date": "2026-10-22",
+  "minimumVersion": "2.0.0",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.0/Janelix-Setup-2.0.0.exe",
+  "notes": [
+    "BookWhats agora se chama Janelix: contas e dados continuam, sem ler o QR Code de novo",
+    "Três temas: Azul, Claro e Escuro",
+    "Agendar mensagem: na hora marcada a conversa abre com o texto pronto para você enviar",
+    "Etiquetas com o nome e a cor que você quiser",
+    "Aba Ligações: ouvir e transcrever as ligações gravadas",
+    "Nome e foto de cada conta vêm do próprio WhatsApp"
+  ]
+}
