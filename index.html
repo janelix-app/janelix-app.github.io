@@ -3,21 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Janelix: todas as suas contas de WhatsApp em uma só janela</title>
+    <title>Janelix · várias contas de WhatsApp Web numa janela só</title>
     <meta
       name="description"
-      content="Programa grátis para Windows que reúne várias contas de WhatsApp em uma janela, com áudios em texto, gravação de ligações, etiquetas, lembretes e mensagens agendadas."
+      content="Programa para Windows que abre várias contas de WhatsApp Web numa janela só, grava ligações, transforma áudio em texto no próprio computador e avisa quando uma conta cai."
     />
     <link rel="canonical" href="https://janelix-app.github.io/" />
-    <meta name="theme-color" content="#060d22" />
+    <meta name="theme-color" content="#060f26" />
+    <meta name="color-scheme" content="dark" />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="preload" href="assets/Nunito.ttf" as="font" type="font/ttf" crossorigin />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:title" content="Janelix: todas as suas contas de WhatsApp em uma só janela" />
-    <meta property="og:description" content="Várias contas, áudios em texto, ligações gravadas, etiquetas e mensagens agendadas. Grátis para Windows." />
+    <meta property="og:site_name" content="Janelix" />
+    <meta property="og:title" content="Janelix · várias contas de WhatsApp Web numa janela só" />
+    <meta property="og:description" content="Várias contas lado a lado, ligações gravadas, áudios em texto sem internet e aviso quando uma conta cai. Para Windows 10 e 11." />
     <meta property="og:url" content="https://janelix-app.github.io/" />
     <meta property="og:image" content="https://janelix-app.github.io/assets/prints/tema-azul.png" />
+    <meta property="og:image:width" content="1440" />
+    <meta property="og:image:height" content="900" />
+    <meta property="og:image:alt" content="O Janelix aberto, com as contas à esquerda, a conversa no centro e o painel de acompanhamento à direita" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="estilo.css" />
     <script>
@@ -30,41 +35,48 @@
         "name": "Janelix",
         "operatingSystem": "Windows 10, Windows 11",
         "applicationCategory": "BusinessApplication",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
         "inLanguage": "pt-BR",
         "url": "https://janelix-app.github.io/"
       }
     </script>
   </head>
   <body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <p class="aviso-teste">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5.5 9.5A1.6 1.6 0 0 0 5.9 21h12.2a1.6 1.6 0 0 0 1.4-2.5L14 9V3" /><path d="M7.5 15h9" /></svg>
+      <span><strong>Versão de teste</strong>, só para a equipe digital.</span>
+    </p>
+
     <header class="top">
       <div class="wrap">
         <a class="marca" href="./" aria-label="Janelix, página inicial"><img src="assets/logo.svg" alt="" width="30" height="30" /><span class="nome">Janel<b>ix</b></span></a>
         <nav aria-label="Seções">
-          <a href="#contas">Contas</a>
-          <a href="#audios">Áudios</a>
-          <a href="#ligacoes">Ligações</a>
+          <a href="#por-dentro">Por dentro</a>
+          <a href="#recursos">Recursos</a>
+          <a href="#instalar">Instalar</a>
           <a href="#perguntas">Perguntas</a>
         </nav>
         <a class="btn btn-mini baixar" href="https://github.com/janelix-app/janelix-releases/releases/latest">Baixar</a>
       </div>
     </header>
 
-    <main>
-      <!-- abertura: o print "abre como uma janela" e se endireita ao rolar -->
+    <main id="conteudo">
+      <!-- abertura -->
       <section class="hero" aria-labelledby="titulo">
-        <div class="wrap">
-          <img class="logo" src="assets/logo.svg" alt="" width="84" height="84" />
-          <h1 id="titulo">Todas as suas contas de WhatsApp.<br /><span class="destaque">Em uma só janela.</span></h1>
-          <p class="lead">Atenda vários números ao mesmo tempo, leia os áudios em texto, grave ligações e não perca nenhum cliente. Grátis, para Windows.</p>
-          <div class="acoes">
-            <a class="btn btn-principal baixar" href="https://github.com/janelix-app/janelix-releases/releases/latest">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M5 21h14" /></svg>
-              Baixar para Windows
-            </a>
-            <a class="btn btn-sec" href="#contas">Conhecer</a>
+        <div class="wrap hero-grade">
+          <h1 id="titulo">Todas as contas do atendimento <span class="quebra">numa janela só.</span></h1>
+          <div class="hero-lado">
+            <p class="lead">O Janelix abre várias contas de WhatsApp Web lado a lado, grava as ligações, transforma áudio em texto no próprio computador e avisa na hora quando uma conta cai.</p>
+            <div class="baixar-bloco">
+              <a class="btn btn-principal baixar" href="https://github.com/janelix-app/janelix-releases/releases/latest">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M5 21h14" /></svg>
+                Baixar o Janelix
+              </a>
+              <p class="versao" id="versao">Windows 10 e 11 (64 bits) · atualiza sozinho</p>
+              <p class="versao-data"><span id="v-data" hidden></span><span>Instalador de cerca de 575 MB</span></p>
+            </div>
           </div>
-          <p class="versao" id="versao">Windows 10 e 11 (64 bits) · atualiza sozinho</p>
         </div>
         <div class="palco">
           <img
@@ -73,103 +85,218 @@
             alt="O Janelix aberto: contas à esquerda, a conversa no centro com áudios transcritos e o painel de acompanhamento à direita"
             width="1440"
             height="900"
+            fetchpriority="high"
           />
         </div>
       </section>
 
-      <section class="capitulo" id="contas" aria-labelledby="t-contas">
-        <div class="wrap duas">
-          <div class="texto-cap revela">
-            <h2 id="t-contas">Cada número no seu lugar.</h2>
-            <p>Atendimento, cobrança, pessoal: cada conta tem a própria sessão, lado a lado. Troque com um clique ou com Ctrl+1, Ctrl+2. O nome e a foto vêm do próprio WhatsApp.</p>
+      <!-- carrossel de prints -->
+      <section class="por-dentro" id="por-dentro" aria-labelledby="t-dentro">
+        <div class="wrap">
+          <div class="cabeca">
+            <h2 id="t-dentro">Veja o Janelix por dentro.</h2>
+            <p>Prints do aplicativo de verdade, com dados de teste. Arraste, use as setas do teclado ou os botões.</p>
           </div>
-          <figure class="print revela"><img src="assets/prints/contas.png" alt="Barra de contas à esquerda e a lista de conversas" width="760" height="470" loading="lazy" /></figure>
+
+          <div class="carrossel" data-carrossel role="region" aria-roledescription="carrossel" aria-label="Prints do Janelix">
+            <div class="janela">
+              <div class="janela-barra" aria-hidden="true">
+                <img src="assets/logo.svg" alt="" width="16" height="16" />
+                <span class="janela-titulo" data-titulo>Janelix</span>
+                <span class="janela-ctrl">
+                  <svg viewBox="0 0 16 16"><path d="M3 8h10" /></svg>
+                  <svg viewBox="0 0 16 16"><rect x="3.5" y="3.5" width="9" height="9" rx="1" /></svg>
+                  <svg viewBox="0 0 16 16"><path d="m4 4 8 8M12 4l-8 8" /></svg>
+                </span>
+              </div>
+              <div class="trilho" tabindex="0" aria-label="Prints do Janelix. Use as setas para trocar.">
+                <figure class="slide" role="group" aria-roledescription="slide" aria-label="1 de 9">
+                  <div class="tela"><img src="assets/prints/contas.png" alt="Barra de contas à esquerda com duas contas conectadas e a lista de conversas com etiquetas" width="760" height="470" draggable="false" /></div>
+                  <figcaption><strong>Várias contas lado a lado</strong> Cada número fica na sua sessão. Troque de conta com um clique.</figcaption>
+                </figure>
+                <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 de 9">
+                  <div class="tela"><img src="assets/prints/audios.png" alt="Mensagem de voz com o texto transcrito logo abaixo, dentro da conversa" width="603" height="480" loading="lazy" draggable="false" /></div>
+                  <figcaption><strong>Áudio vira texto</strong> Transcrito no seu computador, sem internet. O texto aparece no balão do áudio, trecho por trecho.</figcaption>
+                </figure>
+                <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 de 9">
+                  <div class="tela"><img src="assets/prints/gravando.png" alt="Indicador vermelho Gravando ligação com o tempo, o nome do contato e o botão Parar gravação" width="700" height="120" loading="lazy" draggable="false" /></div>
+                  <figcaption><strong>Gravando ligação</strong> Durante a chamada, um botão vermelho piscando mostra que está gravando e há quanto tempo.</figcaption>
+                </figure>
+                <figure class="slide" role="group" aria-roledescription="slide" aria-label="4 de 9">
+                  <div class="tela"><img src="assets/prints/ligacoes.png" alt="Painel Ligações com a gravação, o player e a transcrição separada por quem falou" width="380" height="480" loading="lazy" draggable="false" /></div>
+                  <figcaption><strong>Ligações guardadas</strong> Ouça de novo, leia o que cada um falou e mande o arquivo OGG numa conversa.</figcaption>
+                </figure>
+                <figure class="slide" role="group" aria-roledescription="slide" aria-label="5 de 9">
+                  <div class="tela"><img src="assets/prints/etiquetas.png" alt="Menu de etiquetas aberto na lista de conversas, criando uma etiqueta com cor" width="420" height="600" loading="lazy" draggable="false" /></div>
+                  <figcaption><strong>Etiquetas com cor</strong> Cliente, Em negociação, Cobrança: crie as suas e marque direto na lista.</figcaption>
+                </figure>
+                <figure class="slide" role="group" aria-roledescription="slide" aria-label="6 de 9">
+                  <div class="tela"><img src="assets/prints/agendar.png" alt="Quadro para agendar com o texto da mensagem, a data e atalhos de horário" width="603" height="430" loading="lazy" draggable="false" /></div>
+                  <figcaption><strong>Lembrete na hora certa</strong> Na hora marcada, o Janelix avisa e abre a conversa com o texto pronto. Quem envia é você.</figcaption>
+                </figure>
+                <figure class="slide" role="group" aria-roledescription="slide" aria-label="7 de 9">
+                  <div class="tela"><img src="assets/prints/bloqueio.png" alt="Tela Janelix bloqueado pedindo a senha" width="580" height="440" loading="lazy" draggable="false" /></div>
+                  <figcaption><strong>Bloqueio por senha</strong> Saiu da mesa? Bloqueie. As contas continuam recebendo mensagens.</figcaption>
+                </figure>
+                <figure class="slide" role="group" aria-roledescription="slide" aria-label="8 de 9">
+                  <div class="tela"><img src="assets/prints/tema-claro.png" alt="O Janelix no tema Claro" width="1440" height="900" loading="lazy" draggable="false" /></div>
+                  <figcaption><strong>Tema Claro</strong> Para quem trabalha em sala bem iluminada.</figcaption>
+                </figure>
+                <figure class="slide" role="group" aria-roledescription="slide" aria-label="9 de 9">
+                  <div class="tela"><img src="assets/prints/tema-escuro.png" alt="O Janelix no tema Escuro" width="1440" height="900" loading="lazy" draggable="false" /></div>
+                  <figcaption><strong>Tema Escuro</strong> Além do Azul, que é o padrão, e do Claro.</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="controles">
+              <button class="ctrl" type="button" data-ant aria-label="Print anterior">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7" /></svg>
+              </button>
+              <div class="pontos" data-pontos></div>
+              <button class="ctrl" type="button" data-prox aria-label="Próximo print">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" /></svg>
+              </button>
+              <button class="ctrl ctrl-pausa" type="button" data-pausa aria-label="Pausar troca automática">
+                <svg class="i-pausa" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12" /></svg>
+                <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" /></svg>
+              </button>
+            </div>
+            <p class="sr" aria-live="polite" data-anuncio></p>
+          </div>
         </div>
       </section>
 
-      <section class="capitulo escuro" id="audios" aria-labelledby="t-audios">
-        <div class="wrap centro">
-          <div class="texto-cap revela">
-            <h2 id="t-audios">Áudio de três minutos?<br /><span class="destaque">Leia em dez segundos.</span></h2>
-            <p>Cada áudio vira texto logo abaixo dele, dentro da conversa. Feito no seu computador, sem internet e sem marcar como ouvido.</p>
+      <!-- recursos -->
+      <section class="recursos" id="recursos" aria-labelledby="t-recursos">
+        <div class="wrap">
+          <div class="cabeca">
+            <h2 id="t-recursos">Feito para quem atende o dia inteiro.</h2>
+            <p>Tudo o que o Janelix faz hoje, sem promessa do que ainda não existe.</p>
           </div>
-          <figure class="print grande revela"><img src="assets/prints/audios.png" alt="Mensagens de voz com o texto transcrito embaixo de cada uma" width="603" height="480" loading="lazy" /></figure>
+
+          <div class="grupos">
+            <div class="grupo">
+              <h3>Atender</h3>
+              <dl>
+                <div>
+                  <dt>Várias contas numa janela</dt>
+                  <dd>Cada número na sua própria sessão, lado a lado. Nada de abrir um navegador para cada conta.</dd>
+                </div>
+                <div>
+                  <dt>Áudio vira texto, sem internet</dt>
+                  <dd>A transcrição roda no próprio computador, com o modelo Parakeet. O texto aparece dentro do balão do áudio, trecho por trecho.</dd>
+                </div>
+                <div>
+                  <dt>Ligações gravadas</dt>
+                  <dd>Um botão vermelho piscando mostra “Gravando ligação” e o tempo. O arquivo sai em OGG, o formato de áudio do WhatsApp, pronto para mandar numa conversa.</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="grupo">
+              <h3>Acompanhar</h3>
+              <dl>
+                <div>
+                  <dt>Número de cada conta e aviso de queda</dt>
+                  <dd>Veja qual número está em cada conta. Se uma conta cair ou for banida, o Janelix avisa e mostra a hora da queda.</dd>
+                </div>
+                <div>
+                  <dt>Etiquetas e acompanhamento</dt>
+                  <dd>Marque conversas com etiquetas coloridas e acompanhe as pendentes no painel lateral.</dd>
+                </div>
+                <div>
+                  <dt>Lembretes agendados</dt>
+                  <dd>Marque dia e hora. Na hora, o Janelix avisa e abre a conversa certa.</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="grupo">
+              <h3>Proteger</h3>
+              <dl>
+                <div>
+                  <dt>Bloqueio por senha</dt>
+                  <dd>A tela fica bloqueada até alguém digitar a senha. As contas seguem recebendo mensagens.</dd>
+                </div>
+                <div>
+                  <dt>Azul, Claro ou Escuro</dt>
+                  <dd>Três temas. O Azul é o padrão.</dd>
+                </div>
+                <div>
+                  <dt>Atualiza sozinho</dt>
+                  <dd>Quando sai versão nova, o Janelix baixa e instala, sem perder contas nem dados.</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="capitulo" id="etiquetas" aria-labelledby="t-etiquetas">
-        <div class="wrap duas invertido">
-          <div class="texto-cap revela">
-            <h2 id="t-etiquetas">Saiba quem é quem num relance.</h2>
-            <p>"Cliente novo", "Em negociação", "Pago". Crie as suas etiquetas, escolha a cor e marque direto na lista de conversas. Elas aparecem escritas ao lado do nome.</p>
-          </div>
-          <figure class="print revela"><img src="assets/prints/etiquetas.png" alt="Menu de etiquetas aberto na lista de conversas, criando uma etiqueta com cor" width="420" height="600" loading="lazy" /></figure>
+      <!-- faixa: versão de teste -->
+      <section class="faixa" aria-labelledby="t-faixa">
+        <div class="wrap">
+          <h2 id="t-faixa">Versão de teste, só para a equipe digital.</h2>
+          <p>O Janelix está em teste interno. Use no seu computador de trabalho e conte ao Matheus o que encontrar: o que falhou, o que faltou e o que ajudou.</p>
         </div>
       </section>
 
-      <section class="capitulo escuro" id="agendar" aria-labelledby="t-agendar">
-        <div class="wrap duas">
-          <div class="texto-cap revela">
-            <h2 id="t-agendar">Escreva agora. <span class="destaque">Envie na hora certa.</span></h2>
-            <p>Agende a mensagem para qualquer dia e hora. Na hora marcada, o Janelix avisa e abre a conversa com o texto pronto. Quem aperta enviar é sempre você.</p>
+      <!-- como instalar -->
+      <section class="instalar" id="instalar" aria-labelledby="t-instalar">
+        <div class="wrap">
+          <div class="cabeca">
+            <h2 id="t-instalar">Instale em dois minutos.</h2>
+            <p>O instalador ainda não tem assinatura digital. Por isso, na primeira vez, o Windows mostra um aviso. É só seguir os passos.</p>
           </div>
-          <figure class="print revela"><img src="assets/prints/agendar.png" alt="Quadro de agendar mensagem com texto, data e hora" width="603" height="430" loading="lazy" /></figure>
+
+          <div class="instalar-grade">
+            <ol class="passos">
+              <li>
+                <h3>Baixe o instalador</h3>
+                <p>Clique em <strong>Baixar o Janelix</strong>. O arquivo <code>Janelix-Setup</code> vai para a pasta Downloads.</p>
+              </li>
+              <li>
+                <h3>Abra e passe pelo aviso do Windows</h3>
+                <p>Se aparecer <strong>“O Windows protegeu o computador”</strong>, clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>. As atualizações seguintes não mostram esse aviso.</p>
+              </li>
+              <li>
+                <h3>Conecte as contas</h3>
+                <p>Em cada conta, leia o QR Code com o celular, como no WhatsApp Web. Pronto: dali em diante ele se atualiza sozinho.</p>
+              </li>
+            </ol>
+
+            <figure class="smart" aria-labelledby="smart-leg">
+              <div class="smart-telas">
+                <div class="smart-tela" aria-hidden="true">
+                  <p class="smart-t">O Windows protegeu o computador</p>
+                  <p class="smart-p">O SmartScreen impediu a inicialização de um aplicativo não reconhecido.</p>
+                  <p class="smart-p"><span class="smart-link alvo">Mais informações<i>1</i></span></p>
+                  <div class="smart-botoes"><span class="smart-btn">Não executar</span></div>
+                </div>
+                <div class="smart-tela" aria-hidden="true">
+                  <p class="smart-t">O Windows protegeu o computador</p>
+                  <p class="smart-p">Aplicativo: Janelix-Setup.exe<br />Fornecedor: Fornecedor desconhecido</p>
+                  <div class="smart-botoes"><span class="smart-btn alvo">Executar assim mesmo<i>2</i></span><span class="smart-btn">Não executar</span></div>
+                </div>
+              </div>
+              <figcaption id="smart-leg">Ilustração do aviso: primeiro <strong>Mais informações</strong> (1), depois <strong>Executar assim mesmo</strong> (2).</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
-      <section class="capitulo" id="ortografia" aria-labelledby="t-ortografia">
-        <div class="wrap centro">
-          <div class="texto-cap revela">
-            <h2 id="t-ortografia">Viu o erro? Arrume na hora.</h2>
-            <p>A palavra errada fica sublinhada. Clique nela com o botão direito para ver as sugestões. Nada é trocado sozinho, e o que você digita não sai do computador.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="capitulo escuro" id="ligacoes" aria-labelledby="t-ligacoes">
-        <div class="wrap duas invertido">
-          <div class="texto-cap revela">
-            <h2 id="t-ligacoes">Ligações que não se perdem.</h2>
-            <p>Grave as ligações feitas pelo computador, ouça de novo quando precisar e transforme em texto com um clique, separando o que você e o cliente falaram.</p>
-            <img class="chip-print" src="assets/prints/gravando.png" alt="Indicador Gravando ligação na barra superior, com o botão Parar gravação" width="700" height="120" loading="lazy" />
-          </div>
-          <figure class="print revela"><img src="assets/prints/ligacoes.png" alt="Aba Ligações com a gravação, o player e a transcrição separada por quem falou" width="380" height="480" loading="lazy" /></figure>
-        </div>
-      </section>
-
-      <section class="capitulo" id="temas" aria-labelledby="t-temas">
-        <div class="wrap centro">
-          <div class="texto-cap revela">
-            <h2 id="t-temas">Do seu jeito: <span class="destaque">Azul, Claro ou Escuro.</span></h2>
-            <p>Passe o mouse (ou toque) para ver os três.</p>
-          </div>
-          <div class="leque revela" tabindex="0" role="group" aria-label="Os três temas do Janelix">
-            <img src="assets/prints/tema-escuro.png" alt="Tema Escuro" width="1440" height="900" loading="lazy" />
-            <img src="assets/prints/tema-claro.png" alt="Tema Claro" width="1440" height="900" loading="lazy" />
-            <img src="assets/prints/tema-azul.png" alt="Tema Azul" width="1440" height="900" loading="lazy" />
-          </div>
-        </div>
-      </section>
-
-      <section class="capitulo escuro" id="seguranca" aria-labelledby="t-seguranca">
-        <div class="wrap duas">
-          <div class="texto-cap revela">
-            <h2 id="t-seguranca">Suas conversas ficam com você.</h2>
-            <p>Nada vai para servidor nosso. Os dados ficam no seu computador, cifrados, e o Janelix pode ser bloqueado com senha. Nenhuma mensagem é enviada sozinha.</p>
-          </div>
-          <figure class="print revela"><img src="assets/prints/bloqueio.png" alt="Tela de bloqueio do Janelix pedindo a senha" width="580" height="440" loading="lazy" /></figure>
-        </div>
-      </section>
-
+      <!-- download final + novidades -->
       <section class="final" aria-labelledby="t-final">
-        <div class="wrap centro revela">
-          <img class="logo" src="assets/logo.svg" alt="" width="72" height="72" />
-          <h2 id="t-final">Pronto em dois minutos.</h2>
-          <p>Baixe, abra e leia o QR Code com o celular. Sem cadastro, sem custo.</p>
-          <a class="btn btn-principal baixar" href="https://github.com/janelix-app/janelix-releases/releases/latest">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M5 21h14" /></svg>
-            Baixar para Windows
-          </a>
+        <div class="wrap final-grade">
+          <div>
+            <h2 id="t-final">Pronto para testar?</h2>
+            <p class="final-lead">Baixe, abra e conecte as contas. O Janelix cuida das atualizações.</p>
+            <a class="btn btn-principal baixar" href="https://github.com/janelix-app/janelix-releases/releases/latest">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M5 21h14" /></svg>
+              Baixar o Janelix
+            </a>
+            <p class="final-req">Windows 10 e 11 (64 bits) · instalador de cerca de 575 MB</p>
+          </div>
           <div class="novidades">
             <h3>Novidades da versão <span id="v-num">2.0.2</span></h3>
             <ul id="notas">
@@ -182,38 +309,41 @@
         </div>
       </section>
 
+      <!-- perguntas -->
       <section class="perguntas" id="perguntas" aria-labelledby="t-perguntas">
         <div class="wrap">
           <h2 id="t-perguntas">Perguntas</h2>
-          <details>
-            <summary>É seguro? Minhas conversas vão para algum servidor?</summary>
-            <p>Não. O Janelix abre o WhatsApp Web oficial no seu computador. Conversas, áudios e transcrições ficam só na sua máquina, guardados com a proteção da sua conta do Windows.</p>
-          </details>
-          <details>
-            <summary>O Janelix envia mensagens sozinho?</summary>
-            <p>Nunca. Mesmo nas mensagens agendadas, ele só deixa o texto pronto na conversa: quem envia é sempre você.</p>
-          </details>
-          <details>
-            <summary>Quanto custa?</summary>
-            <p>Nada. É grátis.</p>
-          </details>
-          <details>
-            <summary>Como atualizo?</summary>
-            <p>Não precisa fazer nada: quando sai uma versão nova, o Janelix baixa e instala sozinho, sem perder contas nem dados.</p>
-          </details>
-          <details>
-            <summary>O Windows mostrou um aviso ao abrir o instalador. E agora?</summary>
-            <p>Na primeira instalação o Windows pode mostrar "O Windows protegeu o computador". Clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>. As atualizações seguintes não mostram esse aviso.</p>
-          </details>
+          <div class="perguntas-lista">
+            <details>
+              <summary>O Janelix é do WhatsApp?</summary>
+              <p>Não. O Janelix não tem ligação com o WhatsApp nem com a Meta. Ele só abre o WhatsApp Web oficial, o mesmo do navegador, várias vezes numa janela.</p>
+            </details>
+            <details>
+              <summary>Minhas conversas vão para algum servidor?</summary>
+              <p>Não. Conversas, áudios e transcrições ficam só no seu computador, guardados com a proteção da sua conta do Windows.</p>
+            </details>
+            <details>
+              <summary>O Janelix envia mensagens sozinho?</summary>
+              <p>Nunca. Mesmo nos lembretes, ele só abre a conversa com o texto pronto: quem envia é sempre você.</p>
+            </details>
+            <details>
+              <summary>Como atualizo?</summary>
+              <p>Não precisa fazer nada. Quando sai uma versão nova, o Janelix baixa e instala sozinho, sem perder contas nem dados.</p>
+            </details>
+            <details>
+              <summary>O Windows mostrou um aviso ao abrir o instalador. E agora?</summary>
+              <p>Clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>. O aviso aparece porque o instalador ainda não tem assinatura digital. <a href="#instalar">Veja o passo a passo</a>.</p>
+            </details>
+          </div>
         </div>
       </section>
     </main>
 
     <footer>
       <div class="wrap">
-        <span>Janelix · Criado por Matheus</span>
-        <span>O Janelix usa o WhatsApp Web oficial e não é afiliado, patrocinado ou aprovado pelo WhatsApp nem pela Meta.</span>
-        <a href="privacidade.html">Política de privacidade</a>
+        <a class="marca marca-rodape" href="./" aria-label="Janelix, página inicial"><img src="assets/logo.svg" alt="" width="24" height="24" /><span class="nome">Janel<b>ix</b></span></a>
+        <p class="rodape-aviso">O Janelix não tem ligação com o WhatsApp nem com a Meta, e não é patrocinado ou aprovado por eles. Ele usa o WhatsApp Web oficial.</p>
+        <p class="rodape-links"><span>Criado por Matheus</span><a href="privacidade.html">Política de privacidade</a></p>
       </div>
     </footer>
 
