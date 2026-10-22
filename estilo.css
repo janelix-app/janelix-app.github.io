@@ -135,31 +135,6 @@ code {
   top: 12px;
 }
 
-/* ------------------------------------------------------------ faixa de teste no topo */
-.aviso-teste {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin: 0;
-  padding: 8px 16px;
-  background: var(--brand);
-  color: #fff;
-  font-size: 14px;
-  line-height: 1.4;
-  text-align: center;
-}
-
-.aviso-teste svg {
-  flex: none;
-  width: 16px;
-  height: 16px;
-}
-
-.aviso-teste strong {
-  font-weight: 900;
-}
-
 /* ------------------------------------------------------------ topo */
 .top {
   position: sticky;
