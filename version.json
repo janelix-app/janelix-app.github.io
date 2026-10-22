@@ -1,14 +1,12 @@
 {
-  "version": "2.0.1",
+  "version": "2.0.2",
   "date": "2026-10-22",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.1/Janelix-Setup-2.0.1.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.2/Janelix-Setup-2.0.2.exe",
   "notes": [
-    "Aviso \"Nova versão disponível · Atualizar agora\" com o que mudou em cada versão",
-    "Passando o mouse na conta aparece o número conectado",
-    "Quando uma conta cai ou é banida, o Janelix mostra qual número era e a hora em que caiu",
-    "Fotos de perfil que não apareciam em algumas contas agora aparecem",
-    "A transcrição do áudio fica sempre dentro do balão da mensagem",
-    "Sai a sugestão de correção acima do campo: a correção fica no botão direito, como no WhatsApp, e o texto não sai do computador"
+    "Transcrição de áudio nova (Parakeet): mais certa, bem mais rápida e sem inventar palavras no silêncio",
+    "O texto vai aparecendo no balão do áudio enquanto é transcrito, trecho por trecho",
+    "Gravação de ligações funcionando no WhatsApp atual, com botão vermelho piscando e o tempo da ligação lá em cima",
+    "A gravação da ligação é salva em OGG, o formato de áudio do WhatsApp: dá para mandar numa conversa"
   ]
 }
