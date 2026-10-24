@@ -1,5 +1,5 @@
 /* Site do Janelix: o azul do app, em azul-noite. A janela é o motivo: o print abre como
- * uma janela ao carregar (o único movimento autoral) e o carrossel mora numa janela. */
+ * uma janela ao carregar (o único movimento autoral); cada print vem com a explicação ao lado. */
 @font-face {
   font-family: 'Nunito';
   src: url('assets/Nunito.ttf') format('truetype');
@@ -523,222 +523,110 @@ code {
   text-wrap: pretty;
 }
 
-/* ------------------------------------------------------------ carrossel */
+/* ------------------------------------------------------------ por dentro */
 .por-dentro {
   padding: 120px 40px;
   background: var(--bg-2);
   border-top: 1px solid var(--line);
 }
 
-.janela {
-  overflow: hidden;
+/* cada print com a explicação ao lado, alternando os lados */
+.vitrine {
+  display: grid;
+  gap: clamp(64px, 9vw, 112px);
+  margin: 56px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vitrine > li {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 28px clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+
+.vitrine > li:nth-child(even) .vitrine-print {
+  order: 2;
+}
+
+.vitrine-print {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: clamp(16px, 3vw, 36px);
   border-radius: 14px;
   border: 1px solid var(--line-2);
-  background: var(--stage);
-  box-shadow: 0 30px 70px -24px rgba(0, 0, 0, 0.75);
-}
-
-.janela-barra {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 40px;
-  padding: 8px 4px 8px 14px;
-  background: var(--bg);
-  border-bottom: 1px solid var(--line);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-2);
-}
-
-.janela-titulo {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.janela-ctrl {
-  display: flex;
-  margin-left: auto;
-}
-
-.janela-ctrl svg {
-  width: 44px;
-  height: 16px;
-  padding: 0 14px;
-  stroke-width: 1.2;
-  color: var(--text-3);
-}
-
-.trilho {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  overscroll-behavior-x: contain;
-  scrollbar-width: none;
-  outline-offset: -4px;
-}
-
-.trilho::-webkit-scrollbar {
-  display: none;
-}
-
-.js .trilho {
-  cursor: grab;
-}
-
-.trilho.arrastando {
-  cursor: grabbing;
-  scroll-snap-type: none;
-  user-select: none;
-}
-
-.slide {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  display: grid;
-  grid-template-rows: 1fr auto;
-}
-
-.tela {
-  --pad: clamp(16px, 3vw, 40px);
-  position: relative;
-  aspect-ratio: 16 / 9;
   background:
     radial-gradient(ellipse 70% 60% at 50% 45%, rgba(31, 107, 255, 0.12), transparent 75%),
     var(--stage);
-  overflow: hidden;
+  box-shadow: 0 30px 70px -24px rgba(0, 0, 0, 0.75);
 }
 
-/* o print fica no centro, sem passar do tamanho real */
-.tela img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.vitrine-print img {
   width: auto;
+  max-width: 100%;
   height: auto;
-  max-width: calc(100% - 2 * var(--pad));
-  max-height: calc(100% - 2 * var(--pad));
-  transform: translate(-50%, -50%);
+  max-height: 520px;
   border-radius: 10px;
   box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.8);
 }
 
-.slide figcaption {
-  padding: 20px clamp(18px, 3vw, 32px) 22px;
-  border-top: 1px solid var(--line);
-  background: var(--bg);
+.vitrine-texto h3 {
+  margin: 0 0 14px;
+  font-size: clamp(24px, 2.6vw, 30px);
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.vitrine-texto p {
+  margin: 0 0 16px;
+  font-size: 18px;
+  line-height: 1.6;
   color: var(--text-2);
-  font-size: 17px;
-  line-height: 1.5;
 }
 
-.slide figcaption strong {
-  display: block;
-  margin-bottom: 2px;
-  color: var(--text);
-  font-size: 20px;
-  font-weight: 900;
-  letter-spacing: -0.01em;
-}
-
-.controles {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.js .controles {
-  display: flex;
-}
-
-.ctrl {
+.vitrine-texto ul {
   display: grid;
-  place-items: center;
-  width: 46px;
-  height: 46px;
+  gap: 10px;
+  margin: 0;
   padding: 0;
-  border-radius: 12px;
-  border: 1px solid var(--line-2);
-  background: var(--surface);
-  color: var(--text);
-  cursor: pointer;
-  transition:
-    background-color 0.2s,
-    border-color 0.2s;
+  list-style: none;
 }
 
-.ctrl svg {
-  width: 22px;
-  height: 22px;
-}
-
-.ctrl:hover {
-  background: var(--line);
-  border-color: var(--brand-ink);
-}
-
-.ctrl-pausa {
-  margin-left: 6px;
-}
-
-.ctrl-pausa .i-play,
-.ctrl-pausa[aria-pressed='true'] .i-pausa {
-  display: none;
-}
-
-.ctrl-pausa[aria-pressed='true'] .i-play {
-  display: block;
-}
-
-.ctrl-pausa .i-play {
-  fill: currentColor;
-  stroke-width: 1.5;
-}
-
-.pontos {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  padding: 0 6px;
-}
-
-.ponto {
+.vitrine-texto ul li {
   position: relative;
-  width: 24px;
-  height: 44px;
-  padding: 0;
-  border: 0;
-  background: none;
-  cursor: pointer;
+  padding-left: 26px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--text-2);
 }
 
-.ponto::before {
+.vitrine-texto ul li::before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
+  left: 4px;
+  top: 0.62em;
   width: 8px;
   height: 8px;
-  border-radius: 99px;
-  background: var(--line-2);
-  transform: translate(-50%, -50%);
-  transition:
-    width 0.35s var(--ease),
-    background-color 0.2s;
+  border-radius: 50%;
+  background: var(--brand);
 }
 
-.ponto:hover::before {
-  background: var(--text-3);
+.vitrine-texto a {
+  color: var(--brand-ink);
 }
 
-.ponto[aria-current='true']::before {
-  width: 22px;
-  background: var(--brand-ink);
+@media (max-width: 960px) {
+  .vitrine > li {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .vitrine > li:nth-child(even) .vitrine-print {
+    order: 0;
+  }
 }
+
 
 /* ------------------------------------------------------------ recursos */
 .recursos {
@@ -1028,6 +916,63 @@ code {
   color: var(--brand-ink);
 }
 
+/* ------------------------------------------------------------ para sistemas */
+.sistemas {
+  padding: 120px 40px;
+  background: var(--bg-2);
+  border-top: 1px solid var(--line);
+}
+
+.dev {
+  padding: clamp(20px, 3vw, 32px);
+  border-radius: 14px;
+  border: 1px solid var(--line-2);
+  background: var(--bg);
+}
+
+.dev h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: var(--text);
+}
+
+.dev p,
+.dev li {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--text-2);
+}
+
+.dev p {
+  margin: 0 0 12px;
+}
+
+.dev pre {
+  margin: 0 0 18px;
+  padding: 14px 16px;
+  overflow-x: auto;
+  border-radius: 10px;
+  background: var(--stage);
+}
+
+.dev pre code {
+  padding: 0;
+  background: none;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.dev ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.dev a {
+  color: var(--brand-ink);
+}
+
 /* ------------------------------------------------------------ perguntas */
 .perguntas {
   padding: 104px 40px 112px;
@@ -1264,22 +1209,6 @@ main.wrap {
   .demo-menu {
     order: 2;
   }
-  .tela {
-    aspect-ratio: 1 / 1;
-  }
-
-  .janela-ctrl svg {
-    width: 34px;
-    padding: 0 9px;
-  }
-
-  .slide figcaption {
-    font-size: 16px;
-  }
-
-  .slide figcaption strong {
-    font-size: 18px;
-  }
 
   .passos li {
     padding-left: 56px;
@@ -1291,20 +1220,6 @@ main.wrap {
 
   .novidades {
     padding: 22px 20px;
-  }
-}
-
-@media (max-width: 400px) {
-  .ctrl-pausa {
-    margin-left: 0;
-  }
-
-  .pontos {
-    padding: 0;
-  }
-
-  .ponto {
-    width: 20px;
   }
 }
 

@@ -50,6 +50,7 @@
           <a href="#por-dentro">Por dentro</a>
           <a href="#recursos">Recursos</a>
           <a href="#instalar">Instalar</a>
+          <a href="#para-sistemas">Para sistemas</a>
           <a href="#perguntas">Perguntas</a>
         </nav>
         <a class="btn btn-mini baixar" href="https://github.com/janelix-app/janelix-releases/releases/latest">Baixar</a>
@@ -70,7 +71,7 @@
               Baixar o Janelix
             </a>
             <p class="versao" id="versao">Para Windows 10 e 11 · atualiza sozinho</p>
-            <p class="versao-data"><span id="v-data" hidden></span><span id="v-tam">Download de cerca de 575 MB</span></p>
+            <p class="versao-data"><span id="v-data" hidden></span><span id="v-tam">Download de cerca de 114 MB</span></p>
           </div>
         </div>
 
@@ -113,80 +114,120 @@
         </div>
       </section>
 
-      <!-- carrossel de prints -->
+      <!-- prints com explicação -->
       <section class="por-dentro" id="por-dentro" aria-labelledby="t-dentro">
         <div class="wrap">
           <div class="cabeca">
             <h2 id="t-dentro">Veja o Janelix por dentro.</h2>
-            <p>Prints do aplicativo de verdade, com dados de teste. Arraste, use as setas do teclado ou os botões.</p>
+            <p>Prints do aplicativo de verdade, com dados de teste. Ao lado de cada um, o que ele faz.</p>
           </div>
 
-          <div class="carrossel" data-carrossel role="region" aria-roledescription="carrossel" aria-label="Prints do Janelix">
-            <div class="janela">
-              <div class="janela-barra" aria-hidden="true">
-                <img src="assets/logo.svg" alt="" width="16" height="16" />
-                <span class="janela-titulo" data-titulo>Janelix</span>
-                <span class="janela-ctrl">
-                  <svg viewBox="0 0 16 16"><path d="M3 8h10" /></svg>
-                  <svg viewBox="0 0 16 16"><rect x="3.5" y="3.5" width="9" height="9" rx="1" /></svg>
-                  <svg viewBox="0 0 16 16"><path d="m4 4 8 8M12 4l-8 8" /></svg>
-                </span>
+          <ol class="vitrine">
+            <li>
+              <figure class="vitrine-print"><img src="assets/prints/contas.png" alt="Barra de contas à esquerda com duas contas conectadas e a lista de conversas com etiquetas" width="760" height="470" /></figure>
+              <div class="vitrine-texto">
+                <h3>Várias contas lado a lado</h3>
+                <p>Cada número do WhatsApp fica numa conta separada, todas na mesma janela. A barra da esquerda mostra as contas; um clique troca de uma para outra.</p>
+                <ul>
+                  <li>O número de cada conta aparece no nome, e dá para dar um apelido.</li>
+                  <li>Um número no ícone mostra quantas mensagens novas chegaram em cada conta.</li>
+                  <li>No teclado: Ctrl+1, Ctrl+2… vai direto para cada conta.</li>
+                </ul>
               </div>
-              <div class="trilho" tabindex="0" aria-label="Prints do Janelix. Use as setas para trocar.">
-                <figure class="slide" role="group" aria-roledescription="slide" aria-label="1 de 9">
-                  <div class="tela"><img src="assets/prints/contas.png" alt="Barra de contas à esquerda com duas contas conectadas e a lista de conversas com etiquetas" width="760" height="470" draggable="false" /></div>
-                  <figcaption><strong>Várias contas lado a lado</strong> Cada número fica separado. Troque de conta com um clique.</figcaption>
-                </figure>
-                <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 de 9">
-                  <div class="tela"><img src="assets/prints/audios.png" alt="Mensagem de voz com o texto escrito logo abaixo, dentro do balão do áudio" width="603" height="246" loading="lazy" draggable="false" /></div>
-                  <figcaption><strong>Áudio vira texto</strong> O áudio que o cliente manda aparece escrito no balão, aos poucos. Tudo feito no seu computador.</figcaption>
-                </figure>
-                <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 de 9">
-                  <div class="tela"><img src="assets/prints/gravando.png" alt="Indicador vermelho Gravando ligação com o tempo, o nome do contato e o botão Parar gravação" width="700" height="120" loading="lazy" draggable="false" /></div>
-                  <figcaption><strong>Gravando ligação</strong> Durante a chamada, um botão vermelho piscando mostra que está gravando e há quanto tempo.</figcaption>
-                </figure>
-                <figure class="slide" role="group" aria-roledescription="slide" aria-label="4 de 9">
-                  <div class="tela"><img src="assets/prints/ligacoes.png" alt="Painel Ligações com a gravação, o player e a transcrição separada por quem falou" width="380" height="480" loading="lazy" draggable="false" /></div>
-                  <figcaption><strong>Ligações guardadas</strong> Ouça de novo, leia o que cada um falou e mande a gravação numa conversa.</figcaption>
-                </figure>
-                <figure class="slide" role="group" aria-roledescription="slide" aria-label="5 de 9">
-                  <div class="tela"><img src="assets/prints/etiquetas.png" alt="Menu de etiquetas aberto na lista de conversas, criando uma etiqueta com cor" width="420" height="600" loading="lazy" draggable="false" /></div>
-                  <figcaption><strong>Etiquetas com cor</strong> Cliente, Em negociação, Cobrança: crie as suas e marque direto na lista.</figcaption>
-                </figure>
-                <figure class="slide" role="group" aria-roledescription="slide" aria-label="6 de 9">
-                  <div class="tela"><img src="assets/prints/agendar.png" alt="Quadro para agendar com o texto da mensagem, a data e atalhos de horário" width="603" height="430" loading="lazy" draggable="false" /></div>
-                  <figcaption><strong>Lembrete na hora certa</strong> Na hora marcada, o Janelix avisa e abre a conversa com o texto pronto. Quem envia é você.</figcaption>
-                </figure>
-                <figure class="slide" role="group" aria-roledescription="slide" aria-label="7 de 9">
-                  <div class="tela"><img src="assets/prints/bloqueio.png" alt="Tela Janelix bloqueado pedindo a senha" width="580" height="440" loading="lazy" draggable="false" /></div>
-                  <figcaption><strong>Bloqueio por senha</strong> Saiu da mesa? Bloqueie. As contas continuam recebendo mensagens.</figcaption>
-                </figure>
-                <figure class="slide" role="group" aria-roledescription="slide" aria-label="8 de 9">
-                  <div class="tela"><img src="assets/prints/tema-claro.png" alt="O Janelix no tema Claro" width="1440" height="900" loading="lazy" draggable="false" /></div>
-                  <figcaption><strong>Tema Claro</strong> Para quem trabalha em sala bem iluminada.</figcaption>
-                </figure>
-                <figure class="slide" role="group" aria-roledescription="slide" aria-label="9 de 9">
-                  <div class="tela"><img src="assets/prints/tema-escuro.png" alt="O Janelix no tema Escuro" width="1440" height="900" loading="lazy" draggable="false" /></div>
-                  <figcaption><strong>Tema Escuro</strong> Além do Azul, que é o padrão, e do Claro.</figcaption>
-                </figure>
+            </li>
+            <li>
+              <figure class="vitrine-print"><img src="assets/prints/link.png" alt="Tela Enviar mensagem com o número, a mensagem pronta e as contas conectadas, com a conta de menos envios marcada" width="544" height="554" loading="lazy" /></figure>
+              <div class="vitrine-texto">
+                <h3>Abrir conversa pelo seu sistema</h3>
+                <p>Um link no seu sistema, planilha ou site abre o Janelix já com o número e a mensagem. Você escolhe por qual conta mandar.</p>
+                <ul>
+                  <li>Mostra quantas mensagens cada conta mandou hoje pelo link. A que mandou menos já vem marcada.</li>
+                  <li>A conversa abre com a mensagem escrita. Quem aperta enviar é você.</li>
+                  <li>Só conta como enviada quando você envia de verdade. <a href="#para-sistemas">Como usar o link</a>.</li>
+                </ul>
               </div>
-            </div>
-
-            <div class="controles">
-              <button class="ctrl" type="button" data-ant aria-label="Print anterior">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7" /></svg>
-              </button>
-              <div class="pontos" data-pontos></div>
-              <button class="ctrl" type="button" data-prox aria-label="Próximo print">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" /></svg>
-              </button>
-              <button class="ctrl ctrl-pausa" type="button" data-pausa aria-label="Pausar troca automática">
-                <svg class="i-pausa" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12" /></svg>
-                <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" /></svg>
-              </button>
-            </div>
-            <p class="sr" aria-live="polite" data-anuncio></p>
-          </div>
+            </li>
+            <li>
+              <figure class="vitrine-print"><img src="assets/prints/audios.png" alt="Mensagem de voz com o texto escrito logo abaixo, dentro do balão do áudio" width="603" height="246" loading="lazy" /></figure>
+              <div class="vitrine-texto">
+                <h3>Áudio vira texto</h3>
+                <p>O áudio que o cliente manda aparece escrito dentro do próprio balão, aos poucos, enquanto você atende.</p>
+                <ul>
+                  <li>Feito no seu computador, sem internet: o áudio não vai para lugar nenhum.</li>
+                  <li>Prefere escolher? Desligue o automático e use o botão “Transcrever áudio”.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <figure class="vitrine-print"><img src="assets/prints/gravando.png" alt="Indicador vermelho Gravando ligação com o tempo, o nome do contato e o botão Parar gravação" width="700" height="120" loading="lazy" /></figure>
+              <div class="vitrine-texto">
+                <h3>Gravando ligação</h3>
+                <p>Quando a ligação conecta, o Janelix começa a gravar. Um botão vermelho piscando mostra que está gravando, com quem e há quanto tempo.</p>
+                <ul>
+                  <li>Clique em “Parar gravação” se não quiser gravar aquela ligação.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <figure class="vitrine-print"><img src="assets/prints/ligacoes.png" alt="Painel Ligações com a gravação, o player e a transcrição separada por quem falou" width="380" height="480" loading="lazy" /></figure>
+              <div class="vitrine-texto">
+                <h3>Ligações guardadas</h3>
+                <p>Todas as gravações ficam no painel Ligações, com data, contato e conta.</p>
+                <ul>
+                  <li>Ouça de novo quando precisar.</li>
+                  <li>Peça o texto da ligação: ele separa o que você falou do que o cliente falou.</li>
+                  <li>Mande a gravação numa conversa, como um áudio.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <figure class="vitrine-print"><img src="assets/prints/etiquetas.png" alt="Menu de etiquetas aberto na lista de conversas, criando uma etiqueta com cor" width="420" height="600" loading="lazy" /></figure>
+              <div class="vitrine-texto">
+                <h3>Etiquetas com cor</h3>
+                <p>Marque cada conversa com etiquetas como Cliente, Em negociação ou Cobrança, direto na lista de conversas.</p>
+                <ul>
+                  <li>Crie as suas, com o nome e a cor que quiser.</li>
+                  <li>No painel Acompanhamento, filtre as conversas por etiqueta.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <figure class="vitrine-print"><img src="assets/prints/agendar.png" alt="Quadro para agendar com o texto da mensagem, a data e atalhos de horário" width="603" height="430" loading="lazy" /></figure>
+              <div class="vitrine-texto">
+                <h3>Lembrete na hora certa</h3>
+                <p>O botão ao lado do microfone agenda uma mensagem: escreva o texto e escolha o dia e a hora.</p>
+                <ul>
+                  <li>Cinco minutos antes e na hora, o Janelix avisa, mesmo minimizado.</li>
+                  <li>Na hora, abre a conversa certa com o texto pronto. Quem envia é você.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <figure class="vitrine-print"><img src="assets/prints/bloqueio.png" alt="Tela Janelix bloqueado pedindo a senha" width="580" height="440" loading="lazy" /></figure>
+              <div class="vitrine-texto">
+                <h3>Bloqueio por senha</h3>
+                <p>Saiu da mesa? Bloqueie o Janelix. As conversas ficam escondidas até alguém digitar a senha.</p>
+                <ul>
+                  <li>As contas continuam conectadas e recebendo mensagens.</li>
+                  <li>Os avisos não mostram o conteúdo das mensagens enquanto está bloqueado.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <figure class="vitrine-print"><img src="assets/prints/tema-claro.png" alt="O Janelix no tema Claro" width="1440" height="900" loading="lazy" /></figure>
+              <div class="vitrine-texto">
+                <h3>Tema Claro</h3>
+                <p>Para quem trabalha em sala bem iluminada. Troque o tema no ícone da lua, no alto da janela.</p>
+              </div>
+            </li>
+            <li>
+              <figure class="vitrine-print"><img src="assets/prints/tema-escuro.png" alt="O Janelix no tema Escuro" width="1440" height="900" loading="lazy" /></figure>
+              <div class="vitrine-texto">
+                <h3>Tema Escuro</h3>
+                <p>Descansa a vista no fim do dia. Além dele, há o Azul, que é o padrão, e o Claro.</p>
+              </div>
+            </li>
+          </ol>
         </div>
       </section>
 
@@ -213,6 +254,10 @@
                 <div>
                   <dt>Ligações gravadas</dt>
                   <dd>Um botão vermelho piscando mostra “Gravando ligação” e o tempo. Depois, dá para mandar a gravação numa conversa, como um áudio.</dd>
+                </div>
+                <div>
+                  <dt>Abrir conversa pelo seu sistema</dt>
+                  <dd>Um link no seu sistema abre o Janelix com o número e a mensagem prontos. Você escolhe a conta e aperta enviar.</dd>
                 </div>
               </dl>
             </div>
@@ -278,6 +323,10 @@
                 <h3>Conecte as contas</h3>
                 <p>Em cada conta, leia o QR Code com o celular, como no WhatsApp Web. Pronto: dali em diante ele se atualiza sozinho.</p>
               </li>
+              <li>
+                <h3>Baixe a transcrição dentro do Janelix</h3>
+                <p>Na primeira vez, o Janelix mostra onde clicar para baixar a transcrição de áudios. É um download só, feito dentro do próprio Janelix, e dá para continuar usando enquanto baixa.</p>
+              </li>
             </ol>
 
             <figure class="smart" aria-labelledby="smart-leg">
@@ -313,10 +362,49 @@
             <p class="final-req">Para Windows 10 e 11 · atualiza sozinho</p>
           </div>
           <div class="novidades">
-            <h3>Novidades da versão <span id="v-num">2.0.5</span></h3>
+            <h3>Novidades da versão <span id="v-num">2.0.6</span></h3>
             <ul id="notas">
-              <li>Tela de quedas: botão novo na barra da esquerda mostra o dia, a hora e o número de cada queda, e quantas vezes cada número caiu na semana ou no mês</li>
+              <li>Abrir conversa pelo seu sistema: um link abre o Janelix com o número e a mensagem prontos. Você escolhe a conta e aperta enviar</li>
+              <li>Instalador bem menor: a transcrição é baixada dentro do Janelix, que mostra onde clicar. Quem já tem não baixa de novo</li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- link para sistemas -->
+      <section class="sistemas" id="para-sistemas" aria-labelledby="t-sistemas">
+        <div class="wrap">
+          <div class="cabeca">
+            <h2 id="t-sistemas">Abra conversas a partir do seu sistema.</h2>
+            <p>Seu sistema de cobrança, planilha ou site pode ter um botão “Enviar pelo Janelix”. Ele abre o Janelix com o número e a mensagem prontos. Nada é enviado sozinho.</p>
+          </div>
+
+          <div class="instalar-grade">
+            <ol class="passos">
+              <li>
+                <h3>Clique no botão do seu sistema</h3>
+                <p>O Janelix abre na tela, mostrando para quem vai e a mensagem.</p>
+              </li>
+              <li>
+                <h3>Escolha a conta</h3>
+                <p>Aparecem as contas conectadas e quantas mensagens cada uma mandou hoje pelo link. A que mandou menos já vem marcada.</p>
+              </li>
+              <li>
+                <h3>Revise e envie</h3>
+                <p>A conversa abre com a mensagem escrita. Quem aperta enviar é você.</p>
+              </li>
+            </ol>
+
+            <div class="dev">
+              <h3>Para quem cuida do sistema</h3>
+              <p>O botão é um link neste formato:</p>
+              <pre><code>janelix://enviar?telefone=5518999990000&amp;texto=Ol%C3%A1%2C%20Maria</code></pre>
+              <ul>
+                <li><strong>telefone</strong>: só números, com 55 e DDD. Número do Brasil sem o 55 também funciona.</li>
+                <li><strong>texto</strong>: a mensagem codificada para link (em JavaScript, <code>encodeURIComponent</code>). O sinal de mais vai como <code>%2B</code>. Até 2.000 letras.</li>
+                <li>Se o Janelix não estiver instalado, o link não abre nada. Coloque ao lado do botão: “Não abriu? <a href="https://janelix-app.github.io">Baixe o Janelix</a>”.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

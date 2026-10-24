@@ -1,10 +1,11 @@
 {
-  "version": "2.0.5",
+  "version": "2.0.6",
   "date": "2026-10-24",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.5/Janelix-Setup-2.0.5.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.6/Janelix-Setup-2.0.6.exe",
   "notes": [
-    "Tela de quedas: botão novo na barra da esquerda mostra o dia, a hora e o número de cada queda, e quantas vezes cada número caiu na semana ou no mês"
+    "Abrir conversa pelo seu sistema: um link abre o Janelix com o número e a mensagem prontos. Você escolhe a conta e aperta enviar",
+    "Instalador bem menor: a transcrição é baixada dentro do Janelix, que mostra onde clicar. Quem já tem não baixa de novo"
   ],
-  "sizeMB": 575
+  "sizeMB": 114
 }
