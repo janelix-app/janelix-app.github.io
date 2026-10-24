@@ -1,12 +1,12 @@
 {
-  "version": "2.0.8",
+  "version": "2.0.9",
   "date": "2026-10-24",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.8/Janelix-Setup-2.0.8.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.9/Janelix-Setup-2.0.9.exe",
   "notes": [
-    "Conta do Janelix: crie sua conta uma vez (nome, login e senha). Quem já usava não perde nada",
-    "Frase do dia: uma frase para começar bem, na tela de entrar e no alto da janela",
-    "Minha conta, nas Configurações: veja seu login, troque a senha ou saia"
+    "Sua foto de perfil: ponha em Configurações › Minha conta. Ela aparece no botão novo no canto de cima.",
+    "Botão da sua foto: veja seus WhatsApps conectados e mande sugestões de melhoria para o administrador.",
+    "Frase do dia nova: 366 frases de motivação, uma para cada dia do ano."
   ],
   "sizeMB": 114
 }
