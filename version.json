@@ -1,12 +1,11 @@
 {
-  "version": "2.0.9",
+  "version": "2.0.10",
   "date": "2026-10-24",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.9/Janelix-Setup-2.0.9.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.10/Janelix-Setup-2.0.10.exe",
   "notes": [
-    "Sua foto de perfil: ponha em Configurações › Minha conta. Ela aparece no botão novo no canto de cima.",
-    "Botão da sua foto: veja seus WhatsApps conectados e mande sugestões de melhoria para o administrador.",
-    "Frase do dia nova: 366 frases de motivação, uma para cada dia do ano."
+    "Passeio de apresentação: na primeira vez que você entra, o Janelix mostra cada função e como usar. Veja de novo em Configurações › Sobre.",
+    "Correção: depois de atualizar, o Janelix volta a abrir sozinho."
   ],
   "sizeMB": 114
 }
