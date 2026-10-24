@@ -60,28 +60,56 @@
       <!-- abertura -->
       <section class="hero" aria-labelledby="titulo">
         <div class="wrap hero-grade">
-          <h1 id="titulo">Todas as contas do atendimento <span class="quebra">numa janela só.</span></h1>
-          <div class="hero-lado">
-            <p class="lead">O Janelix abre várias contas de WhatsApp Web lado a lado, grava as ligações, transforma áudio em texto no próprio computador e avisa na hora quando uma conta cai.</p>
-            <div class="baixar-bloco">
-              <a class="btn btn-principal baixar" href="https://github.com/janelix-app/janelix-releases/releases/latest">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M5 21h14" /></svg>
-                Baixar o Janelix
-              </a>
-              <p class="versao" id="versao">Windows 10 e 11 (64 bits) · atualiza sozinho</p>
-              <p class="versao-data"><span id="v-data" hidden></span><span>Instalador de cerca de 575 MB</span></p>
-            </div>
+          <div class="hero-texto">
+            <h1 id="titulo">Todas as contas do atendimento <span class="quebra">numa janela só.</span></h1>
+            <p class="lead">Várias contas de WhatsApp abertas juntas, sem trocar de aba. Veja abaixo, em poucos segundos, o que cada parte faz.</p>
+          </div>
+          <div class="baixar-bloco">
+            <a class="btn btn-principal baixar" href="https://github.com/janelix-app/janelix-releases/releases/latest">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M5 21h14" /></svg>
+              Baixar o Janelix
+            </a>
+            <p class="versao" id="versao">Para Windows 10 e 11 · atualiza sozinho</p>
+            <p class="versao-data"><span id="v-data" hidden></span><span id="v-tam">Download de cerca de 575 MB</span></p>
           </div>
         </div>
-        <div class="palco">
-          <img
-            class="janela-app"
-            src="assets/prints/tema-azul.png"
-            alt="O Janelix aberto: contas à esquerda, a conversa no centro com áudios transcritos e o painel de acompanhamento à direita"
-            width="1440"
-            height="900"
-            fetchpriority="high"
-          />
+
+        <div class="palco" data-demo>
+          <ol class="demo-menu" aria-label="O que o Janelix faz">
+            <li data-foco="0.4 9 5.2 19" data-zoom="1.9" data-centro="0 18">
+              <button type="button"><span class="demo-t">Várias contas</span></button>
+              <p>Cada número de WhatsApp fica numa bolinha à esquerda. Um clique troca de conta. Se uma cair, o Janelix avisa e mostra a hora.</p>
+            </li>
+            <li data-foco="10 19.5 15 6.5" data-zoom="2.2" data-centro="18 23">
+              <button type="button"><span class="demo-t">Etiquetas com cor</span></button>
+              <p>Marque cada conversa: Cobrança, Em negociação, Pagamento. Você vê de longe em que pé está cada cliente.</p>
+            </li>
+            <li data-foco="34.3 24.3 25.4 15" data-zoom="1.9" data-centro="47 31">
+              <button type="button"><span class="demo-t">Áudio vira texto</span></button>
+              <p>O áudio do cliente aparece escrito dentro do balão. Tudo feito no seu computador: o áudio não vai para lugar nenhum.</p>
+            </li>
+            <li data-foco="74.4 12.5 24.4 46" data-zoom="1.6" data-centro="86 34">
+              <button type="button"><span class="demo-t">Lembretes</span></button>
+              <p>Marque dia e hora para falar com o cliente. Na hora, o Janelix abre a conversa com a mensagem pronta. Quem envia é você.</p>
+            </li>
+            <li data-foco="0.6 93 4.6 6.4" data-zoom="2.2" data-centro="0 100">
+              <button type="button"><span class="demo-t">Ligações gravadas</span></button>
+              <p>O botão do telefone guarda as ligações. Dá para ouvir de novo, ler o que cada um falou e mandar a gravação numa conversa.</p>
+            </li>
+          </ol>
+          <div class="demo-tela">
+            <div class="demo-camera">
+              <img
+                class="janela-app"
+                src="assets/prints/tema-azul.png"
+                alt="O Janelix aberto: contas à esquerda, a conversa no centro com áudios em texto e o painel de lembretes à direita"
+                width="1440"
+                height="900"
+                fetchpriority="high"
+              />
+              <span class="demo-foco" aria-hidden="true"></span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -107,11 +135,11 @@
               <div class="trilho" tabindex="0" aria-label="Prints do Janelix. Use as setas para trocar.">
                 <figure class="slide" role="group" aria-roledescription="slide" aria-label="1 de 9">
                   <div class="tela"><img src="assets/prints/contas.png" alt="Barra de contas à esquerda com duas contas conectadas e a lista de conversas com etiquetas" width="760" height="470" draggable="false" /></div>
-                  <figcaption><strong>Várias contas lado a lado</strong> Cada número fica na sua sessão. Troque de conta com um clique.</figcaption>
+                  <figcaption><strong>Várias contas lado a lado</strong> Cada número fica separado. Troque de conta com um clique.</figcaption>
                 </figure>
                 <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 de 9">
-                  <div class="tela"><img src="assets/prints/audios.png" alt="Mensagem de voz com o texto transcrito logo abaixo, dentro da conversa" width="603" height="480" loading="lazy" draggable="false" /></div>
-                  <figcaption><strong>Áudio vira texto</strong> Transcrito no seu computador, sem internet. O texto aparece no balão do áudio, trecho por trecho.</figcaption>
+                  <div class="tela"><img src="assets/prints/audios.png" alt="Mensagem de voz com o texto escrito logo abaixo, dentro do balão do áudio" width="603" height="246" loading="lazy" draggable="false" /></div>
+                  <figcaption><strong>Áudio vira texto</strong> O áudio que o cliente manda aparece escrito no balão, aos poucos. Tudo feito no seu computador.</figcaption>
                 </figure>
                 <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 de 9">
                   <div class="tela"><img src="assets/prints/gravando.png" alt="Indicador vermelho Gravando ligação com o tempo, o nome do contato e o botão Parar gravação" width="700" height="120" loading="lazy" draggable="false" /></div>
@@ -119,7 +147,7 @@
                 </figure>
                 <figure class="slide" role="group" aria-roledescription="slide" aria-label="4 de 9">
                   <div class="tela"><img src="assets/prints/ligacoes.png" alt="Painel Ligações com a gravação, o player e a transcrição separada por quem falou" width="380" height="480" loading="lazy" draggable="false" /></div>
-                  <figcaption><strong>Ligações guardadas</strong> Ouça de novo, leia o que cada um falou e mande o arquivo OGG numa conversa.</figcaption>
+                  <figcaption><strong>Ligações guardadas</strong> Ouça de novo, leia o que cada um falou e mande a gravação numa conversa.</figcaption>
                 </figure>
                 <figure class="slide" role="group" aria-roledescription="slide" aria-label="5 de 9">
                   <div class="tela"><img src="assets/prints/etiquetas.png" alt="Menu de etiquetas aberto na lista de conversas, criando uma etiqueta com cor" width="420" height="600" loading="lazy" draggable="false" /></div>
@@ -176,15 +204,15 @@
               <dl>
                 <div>
                   <dt>Várias contas numa janela</dt>
-                  <dd>Cada número na sua própria sessão, lado a lado. Nada de abrir um navegador para cada conta.</dd>
+                  <dd>Cada número separado, todos na mesma janela. Nada de abrir uma aba do navegador para cada conta.</dd>
                 </div>
                 <div>
                   <dt>Áudio vira texto, sem internet</dt>
-                  <dd>A transcrição roda no próprio computador, com o modelo Parakeet. O texto aparece dentro do balão do áudio, trecho por trecho.</dd>
+                  <dd>O texto aparece dentro do balão do áudio, aos poucos. É feito no seu computador: o áudio do cliente não vai para lugar nenhum.</dd>
                 </div>
                 <div>
                   <dt>Ligações gravadas</dt>
-                  <dd>Um botão vermelho piscando mostra “Gravando ligação” e o tempo. O arquivo sai em OGG, o formato de áudio do WhatsApp, pronto para mandar numa conversa.</dd>
+                  <dd>Um botão vermelho piscando mostra “Gravando ligação” e o tempo. Depois, dá para mandar a gravação numa conversa, como um áudio.</dd>
                 </div>
               </dl>
             </div>
@@ -233,7 +261,7 @@
         <div class="wrap">
           <div class="cabeca">
             <h2 id="t-instalar">Instale em dois minutos.</h2>
-            <p>O instalador ainda não tem assinatura digital. Por isso, na primeira vez, o Windows mostra um aviso. É só seguir os passos.</p>
+            <p>Na primeira vez, o Windows mostra um aviso porque ainda não conhece o Janelix. É só seguir os passos.</p>
           </div>
 
           <div class="instalar-grade">
@@ -282,7 +310,7 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M5 21h14" /></svg>
               Baixar o Janelix
             </a>
-            <p class="final-req">Windows 10 e 11 (64 bits) · instalador de cerca de 575 MB</p>
+            <p class="final-req">Para Windows 10 e 11 · atualiza sozinho</p>
           </div>
           <div class="novidades">
             <h3>Novidades da versão <span id="v-num">2.0.3</span></h3>
@@ -321,7 +349,7 @@
             </details>
             <details>
               <summary>O Windows mostrou um aviso ao abrir o instalador. E agora?</summary>
-              <p>Clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>. O aviso aparece porque o instalador ainda não tem assinatura digital. <a href="#instalar">Veja o passo a passo</a>.</p>
+              <p>Clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>. O aviso aparece porque o Windows ainda não conhece o Janelix. <a href="#instalar">Veja o passo a passo</a>.</p>
             </details>
           </div>
         </div>

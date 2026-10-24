@@ -268,7 +268,7 @@ code {
 
 /* ------------------------------------------------------------ abertura */
 .hero {
-  padding: clamp(56px, 9vw, 112px) 0 0;
+  padding: clamp(40px, 5vw, 64px) 0 0;
   background:
     radial-gradient(ellipse 60% 70% at 85% 0%, rgba(31, 107, 255, 0.22), transparent 70%),
     var(--bg);
@@ -276,15 +276,20 @@ code {
 
 .hero-grade {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-  gap: 28px clamp(40px, 5vw, 72px);
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px clamp(40px, 5vw, 72px);
   align-items: end;
+}
+
+.hero-texto {
+  display: grid;
+  gap: 22px;
 }
 
 .hero h1 {
   margin: 0;
-  max-width: 15ch;
-  font-size: clamp(38px, 5.2vw, 76px);
+  max-width: 22ch;
+  font-size: clamp(38px, 4.4vw, 64px);
   font-weight: 900;
   line-height: 1.02;
   letter-spacing: -0.035em;
@@ -293,12 +298,6 @@ code {
 
 .hero h1 .quebra {
   color: var(--brand-ink);
-}
-
-.hero-lado {
-  display: grid;
-  gap: 28px;
-  padding-bottom: 10px;
 }
 
 .lead {
@@ -334,17 +333,152 @@ code {
   font-weight: 700;
 }
 
+/* ------------------------------------------------------------ demonstração da abertura
+ * Um "vídeo" feito com o print: o menu à esquerda passa sozinho pelas funções e a câmera
+ * aproxima a parte da janela que cada uma explica, com um destaque iluminado em volta.
+ * Sem script, o menu mostra todas as explicações e o print fica parado. */
 .palco {
   max-width: 1200px;
-  margin: clamp(48px, 6vw, 80px) auto 0;
+  margin: clamp(32px, 3.5vw, 48px) auto clamp(48px, 6vw, 80px);
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+  gap: clamp(20px, 2.5vw, 32px);
+  align-items: center;
+}
+
+.demo-menu {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.demo-menu li {
+  position: relative;
+  border-radius: 14px;
+  transition: background-color 0.3s;
+}
+
+.demo-menu button {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  border: 0;
+  background: none;
+  color: var(--text-2);
+  font: 800 18px/1.3 var(--font);
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.demo-menu button:hover {
+  color: var(--text);
+}
+
+.demo-menu p {
+  margin: -6px 0 0;
+  padding: 0 18px 16px;
+  color: var(--text-2);
+  font-size: 15.5px;
+  line-height: 1.5;
+}
+
+.js .demo-menu p {
+  max-height: 0;
+  overflow: hidden;
+  padding-bottom: 0;
+  opacity: 0;
+  transition:
+    max-height 0.5s var(--ease),
+    opacity 0.4s,
+    padding 0.5s var(--ease);
+}
+
+.js .demo-menu li.ativo {
+  background: var(--surface);
+}
+
+.js .demo-menu li.ativo button {
+  color: var(--text);
+}
+
+.js .demo-menu li.ativo p {
+  max-height: 160px;
+  padding-bottom: 18px;
+  opacity: 1;
+}
+
+/* barra de tempo da função que está passando */
+.demo-menu li::after {
+  content: '';
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 0;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--brand);
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+}
+
+.js [data-demo].rodando li.ativo::after {
+  opacity: 1;
+  animation: tempo var(--tempo, 6s) linear forwards;
+}
+
+@keyframes tempo {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.demo-tela {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--line-2);
+  box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.8);
+}
+
+.demo-camera {
+  position: relative;
+  transform-origin: var(--cx, 50%) var(--cy, 50%);
+  transform: scale(var(--zoom, 1));
+  transition:
+    transform 1.3s var(--ease),
+    transform-origin 1.3s var(--ease);
 }
 
 .janela-app {
   width: 100%;
-  border-radius: 14px 14px 0 0;
-  border: 1px solid var(--line-2);
-  border-bottom: 0;
-  box-shadow: 0 -12px 50px -18px rgba(0, 0, 0, 0.7);
+}
+
+/* destaque: o resto da janela escurece e a parte explicada fica com uma moldura */
+.demo-foco {
+  position: absolute;
+  left: var(--fx, 0);
+  top: var(--fy, 0);
+  width: var(--fw, 100%);
+  height: var(--fh, 100%);
+  border: 2px solid var(--brand-ink);
+  border-radius: 8px;
+  box-shadow: 0 0 0 200vmax rgba(6, 15, 38, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    left 1.3s var(--ease),
+    top 1.3s var(--ease),
+    width 1.3s var(--ease),
+    height 1.3s var(--ease),
+    opacity 0.5s;
+}
+
+[data-demo].focando .demo-foco {
+  opacity: 1;
 }
 
 /* a janela se abre do centro para os lados ao carregar */
@@ -1122,17 +1256,14 @@ main.wrap {
     width: 100%;
   }
 
-  /* no celular o print do app aparece maior, mostrando contas e conversa */
+  /* no celular o menu vai para baixo da janela */
   .palco {
-    overflow: hidden;
-    border-radius: 14px 14px 0 0;
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .janela-app {
-    width: 190%;
-    max-width: none;
+  .demo-menu {
+    order: 2;
   }
-
   .tela {
     aspect-ratio: 1 / 1;
   }
@@ -1187,6 +1318,11 @@ main.wrap {
     animation: none;
   }
 
+  .demo-camera,
+  .demo-foco,
+  .js .demo-menu p {
+    transition-duration: 0.01s;
+  }
   .btn,
   .btn svg,
   .ponto::before,
