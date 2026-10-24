@@ -1,10 +1,12 @@
 {
-  "version": "2.0.7",
+  "version": "2.0.8",
   "date": "2026-10-24",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.7/Janelix-Setup-2.0.7.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.8/Janelix-Setup-2.0.8.exe",
   "notes": [
-    "Correção: a transcrição do primeiro áudio de uma sequência às vezes aparecia fora do balão"
+    "Conta do Janelix: crie sua conta uma vez (nome, login e senha). Quem já usava não perde nada",
+    "Frase do dia: uma frase para começar bem, na tela de entrar e no alto da janela",
+    "Minha conta, nas Configurações: veja seu login, troque a senha ou saia"
   ],
   "sizeMB": 114
 }
