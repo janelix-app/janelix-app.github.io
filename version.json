@@ -1,12 +1,14 @@
 {
-  "version": "2.0.2",
-  "date": "2026-10-22",
+  "version": "2.0.3",
+  "date": "2026-10-24",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.2/Janelix-Setup-2.0.2.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.3/Janelix-Setup-2.0.3.exe",
   "notes": [
-    "Transcrição de áudio nova (Parakeet): mais certa, bem mais rápida e sem inventar palavras no silêncio",
-    "O texto vai aparecendo no balão do áudio enquanto é transcrito, trecho por trecho",
-    "Gravação de ligações funcionando no WhatsApp atual, com botão vermelho piscando e o tempo da ligação lá em cima",
-    "A gravação da ligação é salva em OGG, o formato de áudio do WhatsApp: dá para mandar numa conversa"
+    "Mensagem agendada avisa 5 minutos antes e na hora, com um botão para abrir a conversa com o texto pronto (quem envia é sempre você)",
+    "Quadro de agendar novo: mostra para quem é, atalhos de horário e diz por extenso quando vai ser (\"Será hoje às 10:15\")",
+    "A transcrição de um áudio já transcrito aparece na hora ao voltar na conversa, sem transcrever de novo",
+    "Notificação de mensagem mostra a foto de quem mandou (e não mais a foto da sua conta)",
+    "Correção: abrir a conversa pelo aviso agora funciona com contato não salvo (só o número) e com nome que tem emoji",
+    "Correção: o Janelix não trava mais ao abrir quando encontra uma configuração de outra versão"
   ]
 }
