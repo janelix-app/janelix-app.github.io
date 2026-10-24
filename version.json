@@ -1,14 +1,10 @@
 {
-  "version": "2.0.4",
+  "version": "2.0.5",
   "date": "2026-10-24",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.4/Janelix-Setup-2.0.4.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.5/Janelix-Setup-2.0.5.exe",
   "notes": [
-    "Versão nova chega mais rápido: o Janelix procura atualização a cada 30 minutos (antes, a cada 2 horas)",
-    "Correção: ligação muito longa agora é sempre salva no formato de áudio do WhatsApp",
-    "Correção: a transcrição não fica mais parada se o processo travar, e não fica lenta até reiniciar o Janelix",
-    "Aviso de mensagem agendada 5 minutos antes também aparece no Windows, mesmo com o Janelix minimizado",
-    "Correção: abrir conversa pelo aviso procura primeiro pelo nome quando ele é só números"
+    "Tela de quedas: botão novo na barra da esquerda mostra o dia, a hora e o número de cada queda, e quantas vezes cada número caiu na semana ou no mês"
   ],
   "sizeMB": 575
 }
