@@ -1,12 +1,13 @@
 {
-  "version": "2.0.13",
+  "version": "2.0.14",
   "date": "2026-10-26",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.13/Janelix-Setup-2.0.13.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.14/Janelix-Setup-2.0.14.exe",
   "notes": [
-    "Painel Ligações: botão \"Transcrever arquivo\" para transformar em texto qualquer áudio do computador.",
-    "Os áudios baixados que você manda transcrever agora aparecem na lista do painel Ligações, com o texto.",
-    "Filtro \"Só arquivos de áudio\" no painel Ligações."
+    "Histórico de conversas: botão novo na barra da esquerda. As mensagens ficam guardadas e protegidas no computador, mesmo se o número cair ou for banido.",
+    "No histórico, busque por nome, número ou palavra. Mensagens abertas pelo link do sistema aparecem marcadas.",
+    "A transcrição do áudio não some mais: saiu e voltou para a conversa, o texto continua embaixo do áudio, sem baixar de novo.",
+    "A transcrição fica só dentro da conversa: saíram o \"Transcrever arquivo\" do painel Ligações e o \"Transcrever\" do aviso de download."
   ],
   "sizeMB": 114
 }
