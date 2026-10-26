@@ -1,13 +1,10 @@
 {
-  "version": "2.0.15",
+  "version": "2.0.16",
   "date": "2026-10-26",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.15/Janelix-Setup-2.0.15.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.16/Janelix-Setup-2.0.16.exe",
   "notes": [
-    "Cópia protegida das conversas no servidor: trocou de computador, entre com o seu login e as conversas dos últimos 30 dias voltam.",
-    "Só você abre essa cópia, com a sua senha ou com a chave de recuperação, que aparece uma vez para você anotar.",
-    "Quem já usa o Janelix confirma a senha uma única vez para ligar a cópia. Em Configurações › Privacidade dá para ver a última cópia.",
-    "Atenção: depois desta versão, não volte para uma versão anterior do Janelix. A versão antiga não entende o histórico novo e o apagaria deste computador."
+    "Ao criar a conta, você escolhe o seu setor. Ele já entra direto no setor certo; para mudar depois, fale com o seu gerente."
   ],
   "sizeMB": 114
 }
