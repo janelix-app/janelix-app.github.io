@@ -1,11 +1,12 @@
 {
-  "version": "2.0.10",
-  "date": "2026-10-24",
+  "version": "2.0.11",
+  "date": "2026-10-26",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.10/Janelix-Setup-2.0.10.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.11/Janelix-Setup-2.0.11.exe",
   "notes": [
-    "Passeio de apresentação: na primeira vez que você entra, o Janelix mostra cada função e como usar. Veja de novo em Configurações › Sobre.",
-    "Correção: depois de atualizar, o Janelix volta a abrir sozinho."
+    "Painel Empresa: quem acabou de criar conta já pode ir para qualquer setor, pelo \"Mover para setor\" ao lado do nome.",
+    "Em \"Gerenciar\", o admin muda a pessoa de setor direto, sem pedido de transferência.",
+    "Os campos Equipe, Setor e Papel ficaram menores e mais fáceis de ler."
   ],
   "sizeMB": 114
 }
