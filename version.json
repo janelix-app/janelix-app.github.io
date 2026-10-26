@@ -1,12 +1,12 @@
 {
-  "version": "2.0.12",
+  "version": "2.0.13",
   "date": "2026-10-26",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.12/Janelix-Setup-2.0.12.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.13/Janelix-Setup-2.0.13.exe",
   "notes": [
-    "Mais proteção: se alguém ou algum vírus alterar os arquivos do Janelix, ele não abre.",
-    "Ninguém consegue controlar o Janelix por fora nem abrir as ferramentas de programador nele.",
-    "O código do Janelix fica embaralhado, difícil de ler por quem tentar copiar."
+    "Painel Ligações: botão \"Transcrever arquivo\" para transformar em texto qualquer áudio do computador.",
+    "Os áudios baixados que você manda transcrever agora aparecem na lista do painel Ligações, com o texto.",
+    "Filtro \"Só arquivos de áudio\" no painel Ligações."
   ],
   "sizeMB": 114
 }
