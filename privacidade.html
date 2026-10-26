@@ -24,16 +24,17 @@
     <main class="wrap">
       <article class="texto">
         <h1>Política de privacidade</h1>
-        <p>Atualizada em 24 de outubro de 2026. Vale para o programa Janelix e para este site, conforme a Lei Geral de Proteção de Dados (LGPD, Lei 13.709/2018).</p>
+        <p>Atualizada em 26 de outubro de 2026. Vale para o programa Janelix e para este site, conforme a Lei Geral de Proteção de Dados (LGPD, Lei 13.709/2018).</p>
 
         <h2>Resumo</h2>
-        <p>O Janelix funciona no seu computador. Suas conversas, áudios, transcrições, etiquetas e lembretes ficam só nele. O único dado que vai para o nosso servidor é a sua conta do Janelix: nome, login e senha (guardada de forma que nem nós conseguimos ler).</p>
+        <p>O Janelix funciona no seu computador. Áudios, gravações de ligações, transcrições, etiquetas e lembretes ficam só nele. No nosso servidor ficam a sua conta (nome, login, setor, equipe e foto), a lista dos seus números com a situação de cada um e uma cópia protegida das suas conversas dos últimos 30 dias, que só você consegue abrir.</p>
 
         <h2>O que fica no seu computador</h2>
         <ul>
           <li>As sessões do WhatsApp de cada conta, como num navegador.</li>
           <li>Etiquetas, anotações, lembretes, mensagens agendadas, transcrições e configurações, cifrados (AES-256) com a proteção da sua conta do Windows.</li>
           <li>As gravações de ligações, na pasta <strong>Documentos\Janelix</strong>.</li>
+          <li>O histórico das conversas (o texto das mensagens), cifrado da mesma forma.</li>
         </ul>
         <p>A transcrição de áudios e de ligações é feita no próprio computador. Nenhum áudio é enviado para a internet.</p>
         <p>O corretor ortográfico também funciona no computador. O texto que você digita não é enviado a nenhum serviço de correção.</p>
@@ -42,7 +43,10 @@
         <ul>
           <li><strong>WhatsApp:</strong> o Janelix abre o WhatsApp Web oficial. A comunicação com o WhatsApp segue a política de privacidade do WhatsApp.</li>
           <li><strong>Atualizações:</strong> o programa consulta o GitHub para saber se há versão nova e baixá-la. Nenhum dado seu vai junto.</li>
-          <li><strong>Sua conta do Janelix:</strong> nome, login, se você é operador ou administrador e se a conta está ativa ficam no nosso servidor (Supabase), para você entrar e para o administrador gerenciar a equipe. A senha é guardada embaralhada (hash) e ninguém consegue lê-la. Conversas, contatos e áudios nunca vão para o servidor.</li>
+          <li><strong>Sua conta do Janelix:</strong> nome, login, foto, papel (operador, líder, gerente ou administrador), setor, equipe e se a conta está ativa ficam no nosso servidor (Supabase), para você entrar e para a sua liderança organizar a equipe. A senha é guardada embaralhada (hash) e ninguém consegue lê-la.</li>
+          <li><strong>Seus números de WhatsApp:</strong> o número, o apelido da conta e se ela está conectada, desconectada ou banida. Quem cuida da sua equipe vê essa lista. As conversas não vão junto.</li>
+          <li><strong>Cópia protegida das conversas:</strong> o texto das mensagens dos últimos 30 dias, para você recuperar o histórico ao trocar de computador. Ele sai do seu computador já cifrado (AES-256) com uma chave que só abre com a sua senha ou com a chave de recuperação mostrada a você. Ninguém da empresa lê essa cópia, nem o administrador. Áudios, fotos e gravações nunca vão para o servidor.</li>
+          <li><strong>Sugestões e registro de ações:</strong> as sugestões que você manda e as ações feitas no painel da equipe (como mudar alguém de setor), para o administrador acompanhar.</li>
         </ul>
 
         <h2>Este site</h2>
@@ -51,8 +55,11 @@
         <h2>Gravação de ligações</h2>
         <p>A gravação é opcional e só acontece em ligações feitas ou atendidas no Janelix. Se você usar no trabalho, avise o cliente de que a ligação é gravada e use a gravação só para a finalidade informada.</p>
 
+        <h2>Por quanto tempo guardamos</h2>
+        <p>A cópia das conversas guarda só os últimos 30 dias: o que fica mais antigo é apagado sozinho. O registro de ações, os pedidos de transferência e as sugestões já respondidas também são apagados depois de 30 dias. Quando uma pessoa é desligada da equipe, a conta, a foto, os números e a cópia das conversas dela são apagados do servidor.</p>
+
         <h2>Seus direitos</h2>
-        <p>Como os dados ficam com você, você mesmo pode vê-los, copiá-los ou apagá-los a qualquer momento: em Configurações &gt; Privacidade e segurança dá para apagar o histórico ou tudo. Ao desinstalar, o Janelix pergunta se deve apagar os dados. Para apagar a sua conta do Janelix no servidor, peça ao administrador ou abra uma solicitação no contato abaixo.</p>
+        <p>Você pode ver, copiar ou apagar os dados do seu computador a qualquer momento: em Configurações &gt; Privacidade e segurança dá para apagar o histórico ou tudo. A cópia das conversas no servidor continua para você recuperar depois. Ao desinstalar, o Janelix pergunta se deve apagar os dados. Para apagar a sua conta do Janelix no servidor, peça ao administrador ou abra uma solicitação no contato abaixo.</p>
 
         <h2>Contato</h2>
         <p>Dúvidas sobre privacidade: abra uma solicitação na <a href="https://github.com/janelix-app/janelix-releases/issues">página do projeto no GitHub</a>.</p>

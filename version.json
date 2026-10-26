@@ -1,10 +1,10 @@
 {
-  "version": "2.0.16",
+  "version": "2.0.17",
   "date": "2026-10-26",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.16/Janelix-Setup-2.0.16.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.17/Janelix-Setup-2.0.17.exe",
   "notes": [
-    "Ao criar a conta, você escolhe o seu setor. Ele já entra direto no setor certo; para mudar depois, fale com o seu gerente."
+    "Política de privacidade atualizada: explica o que fica no servidor (sua conta, a lista dos seus números e a cópia protegida das conversas dos últimos 30 dias, que só você abre) e por quanto tempo."
   ],
   "sizeMB": 114
 }
