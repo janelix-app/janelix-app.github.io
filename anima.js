@@ -81,6 +81,46 @@
     setTimeout(() => mostra(0), calmo ? 0 : 1400);
   }
 
+  // ---------------------------------------------------------------- frase de impacto
+  // Cada palavra acende quando passa da metade de baixo da tela, na ordem de leitura.
+  // Com menos movimento (ou sem JS), a frase aparece inteira acesa.
+  const frase = document.querySelector('[data-frase]');
+  if (frase) {
+    const palavras = frase.textContent.trim().split(/\s+/);
+    frase.replaceChildren(
+      ...palavras.flatMap((w, i) => {
+        const span = document.createElement('span');
+        span.className = /^Janelix/.test(w) ? 'p marca-p' : 'p';
+        span.textContent = w;
+        return i ? [document.createTextNode(' '), span] : [span];
+      }),
+    );
+    const spans = [...frase.querySelectorAll('.p')];
+    if (calmo || !('IntersectionObserver' in window)) {
+      spans.forEach((s) => s.classList.add('acesa'));
+    } else {
+      let pedido = 0;
+      const atualiza = () => {
+        pedido = 0;
+        const linha = window.innerHeight * 0.72;
+        const r = frase.getBoundingClientRect();
+        // progresso: 0 quando o topo da frase cruza a linha, 1 quando o fim cruza
+        const prog = Math.min(1, Math.max(0, (linha - r.top) / Math.max(1, r.height + window.innerHeight * 0.2)));
+        const n = Math.round(prog * spans.length);
+        spans.forEach((s, i) => s.classList.toggle('acesa', i < n));
+      };
+      const pede = () => {
+        if (!pedido) pedido = requestAnimationFrame(atualiza);
+      };
+      // só escuta a rolagem enquanto a frase está na tela
+      new IntersectionObserver(([e]) => {
+        if (e.isIntersecting) window.addEventListener('scroll', pede, { passive: true });
+        else window.removeEventListener('scroll', pede);
+        pede();
+      }).observe(frase);
+    }
+  }
+
   // ---------------------------------------------------------------- versão e download
   // Versão e link de download sempre da versão mais nova (version.json).
   fetch('version.json', { cache: 'no-cache' })

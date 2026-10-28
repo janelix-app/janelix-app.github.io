@@ -1120,6 +1120,218 @@ main.wrap {
   max-width: none;
 }
 
+/* ------------------------------------------------------------ acabamento */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+/* garantias logo abaixo do título */
+.garantias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.garantias li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px 4px 8px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  background: rgba(15, 31, 71, 0.6);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+.garantias svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  fill: none;
+  stroke: #4ade80;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* prints da vitrine reagem ao mouse */
+.vitrine-print,
+.cartao-print {
+  transition:
+    transform 500ms var(--ease),
+    border-color 300ms ease,
+    box-shadow 500ms var(--ease);
+}
+
+.vitrine > li:hover .vitrine-print,
+.cartao:hover .cartao-print {
+  transform: translateY(-4px);
+  border-color: #3a5aa8;
+  box-shadow: 0 40px 80px -28px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(31, 107, 255, 0.15);
+}
+
+/* "E mais": as outras funções em cartões */
+.mosaico-titulo {
+  margin: clamp(80px, 10vw, 128px) 0 32px;
+  font-size: clamp(24px, 2.6vw, 30px);
+  line-height: 1.2;
+}
+
+.mosaico {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cartao {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.cartao-print {
+  display: grid;
+  place-items: center;
+  height: 240px;
+  margin: 0;
+  padding: 24px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 45%, rgba(31, 107, 255, 0.14), transparent 75%),
+    var(--stage);
+}
+
+.cartao-print img {
+  max-width: 100%;
+  max-height: 192px;
+  object-fit: contain;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 14px 32px -14px rgba(0, 0, 0, 0.8);
+}
+
+.cartao-texto {
+  padding: 24px;
+}
+
+.cartao-texto h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.cartao-texto p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-2);
+}
+
+.cartao-texto ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cartao-texto ul li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-3);
+}
+
+.cartao-texto ul li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand);
+}
+
+/* frase de impacto: cada palavra acende ao rolar */
+.frase {
+  padding: clamp(96px, 14vw, 176px) 40px;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+
+.frase-texto {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: clamp(30px, 4.4vw, 48px);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.frase-texto .p {
+  color: rgba(238, 243, 255, 0.45);
+  transition: color 600ms var(--ease);
+}
+
+.frase-texto .p.acesa {
+  color: var(--text);
+}
+
+.frase-texto .p.marca-p.acesa {
+  color: var(--brand-ink);
+}
+
+@media (max-width: 720px) {
+  .frase {
+    padding: 80px 16px;
+  }
+
+  .cartao-print {
+    height: 200px;
+  }
+
+  .cartao-print img {
+    max-height: 152px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vitrine-print,
+  .cartao-print,
+  .frase-texto .p {
+    transition-duration: 0.01s;
+  }
+
+  .vitrine > li:hover .vitrine-print,
+  .cartao:hover .cartao-print {
+    transform: none;
+  }
+}
+
 /* ------------------------------------------------------------ telas menores */
 @media (max-width: 960px) {
   :root {
