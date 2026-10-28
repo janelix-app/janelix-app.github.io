@@ -1,11 +1,10 @@
 {
-  "version": "2.0.20",
+  "version": "2.0.21",
   "date": "2026-10-28",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.20/Janelix-Setup-2.0.20.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.21/Janelix-Setup-2.0.21.exe",
   "notes": [
-    "Ligações: o contador começa quando o contato atende, e não mais no som de chamando.",
-    "Barra de cima: o nome Janelix e \"Criado por Matheus\" aparecem ao lado da logo também em telas menores e com zoom."
+    "Notificações: responda direto no aviso do Windows, sem abrir o Janelix (escreva e clique em Responder)."
   ],
   "sizeMB": 114
 }
