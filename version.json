@@ -1,10 +1,12 @@
 {
-  "version": "2.0.21",
+  "version": "2.0.22",
   "date": "2026-10-28",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.21/Janelix-Setup-2.0.21.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.22/Janelix-Setup-2.0.22.exe",
   "notes": [
-    "Notificações: responda direto no aviso do Windows, sem abrir o Janelix (escreva e clique em Responder)."
+    "Correções gerais: a chave de recuperação nova fica na tela para anotar; gravação de ligações seguidas sai com o nome certo; remover conta que falha volta a aparecer.",
+    "Lembrete novo sugere o horário a partir de agora; etiquetas e lembretes ficam salvos mesmo fechando o Janelix logo depois.",
+    "Mais estável: botões não travam quando algo dá errado e o Esc fecha as janelas."
   ],
   "sizeMB": 114
 }
