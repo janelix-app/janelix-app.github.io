@@ -1,13 +1,11 @@
 {
-  "version": "2.0.19",
+  "version": "2.0.20",
   "date": "2026-10-28",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.19/Janelix-Setup-2.0.19.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.20/Janelix-Setup-2.0.20.exe",
   "notes": [
-    "Ligações: silenciar o microfone ou trocar de fone no meio da ligação não divide mais a gravação em dois arquivos.",
-    "Senha: agora pode ser só números, só letras ou os dois, com pelo menos 6 caracteres.",
-    "Visual renovado no app inteiro: filtros, buscas, campos, painéis, lembretes, janelas, avisos e a área de Sugestões (a caixa de texto não fica mais cinza).",
-    "Frases do dia novas: 366 frases de motivação, mais fortes."
+    "Ligações: o contador começa quando o contato atende, e não mais no som de chamando.",
+    "Barra de cima: o nome Janelix e \"Criado por Matheus\" aparecem ao lado da logo também em telas menores e com zoom."
   ],
   "sizeMB": 114
 }
