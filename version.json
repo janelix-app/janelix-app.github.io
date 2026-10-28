@@ -1,12 +1,10 @@
 {
-  "version": "2.0.24",
+  "version": "2.0.25",
   "date": "2026-10-28",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.24/Janelix-Setup-2.0.24.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.25/Janelix-Setup-2.0.25.exe",
   "notes": [
-    "Apagar tudo agora apaga mesmo tudo deste computador, inclusive as gravações de ligações e a transcrição baixada.",
-    "Apagar uma transcrição ou um lembrete pede confirmação antes.",
-    "Duas pessoas no mesmo Windows: cada uma só vê o próprio Histórico."
+    "Responder pela notificação: a mensagem agora vai para a conversa certa e o Enter envia (botão de enviar ao lado do campo)."
   ],
   "sizeMB": 114
 }
