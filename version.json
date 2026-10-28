@@ -1,10 +1,10 @@
 {
-  "version": "2.0.25",
+  "version": "2.0.26",
   "date": "2026-10-28",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.25/Janelix-Setup-2.0.25.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.26/Janelix-Setup-2.0.26.exe",
   "notes": [
-    "Responder pela notificação: a mensagem agora vai para a conversa certa e o Enter envia (botão de enviar ao lado do campo)."
+    "Responder pela notificação: o Janelix abre a conversa certa mesmo com a janela em segundo plano. Escreva no aviso e clique em Responder."
   ],
   "sizeMB": 114
 }
