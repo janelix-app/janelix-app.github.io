@@ -1,12 +1,10 @@
 {
-  "version": "2.0.28",
+  "version": "2.0.29",
   "date": "2026-11-01",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.28/Janelix-Setup-2.0.28.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.29/Janelix-Setup-2.0.29.exe",
   "notes": [
-    "Site novo, com uma janela do Janelix funcionando na página.",
-    "Responder pela notificação: se a conversa não abrir em segundo plano, o Janelix vem para frente na conta certa.",
-    "Ligações: registro do que acontece em cada passo, para achar por que uma ligação não gravou."
+    "Ligações: volta a gravar. O WhatsApp mudou o jeito de usar o áudio, e o Janelix descartava a ligação."
   ],
   "sizeMB": 114
 }
