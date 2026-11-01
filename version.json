@@ -1,13 +1,11 @@
 {
-  "version": "2.0.31",
+  "version": "2.0.32",
   "date": "2026-11-01",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.31/Janelix-Setup-2.0.31.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.32/Janelix-Setup-2.0.32.exe",
   "notes": [
-    "Sugestões: quem mandou e o administrador podem apagar, e cada sugestão some sozinha 7 dias depois de enviada.",
-    "Desligar alguém ficou mais simples: basta escrever desligar e confirmar, sem digitar o nome.",
-    "Barra de cima mais limpa: a sugestão virou uma lâmpada e o tema foi para a barra da esquerda, embaixo.",
-    "Administrador: a lâmpada mostra quantas sugestões chegaram e de quem."
+    "Link de envio: a conversa abre pela Nova conversa do WhatsApp, inclusive para número não salvo, sem recarregar a página.",
+    "Na tela do link, todas as contas continuam na lista com a contagem de envios do dia."
   ],
   "sizeMB": 114
 }
