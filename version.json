@@ -1,11 +1,10 @@
 {
-  "version": "2.0.32",
+  "version": "2.0.33",
   "date": "2026-11-01",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.32/Janelix-Setup-2.0.32.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.33/Janelix-Setup-2.0.33.exe",
   "notes": [
-    "Link de envio: a conversa abre pela Nova conversa do WhatsApp, inclusive para número não salvo, sem recarregar a página.",
-    "Na tela do link, todas as contas continuam na lista com a contagem de envios do dia."
+    "O WhatsApp não recarrega mais ao abrir conversa por lembrete, mensagem agendada ou link wa.me: tudo abre na hora pela Nova conversa."
   ],
   "sizeMB": 114
 }
