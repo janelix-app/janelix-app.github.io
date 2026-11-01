@@ -1,11 +1,13 @@
 {
-  "version": "2.0.30",
+  "version": "2.0.31",
   "date": "2026-11-01",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.30/Janelix-Setup-2.0.30.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.31/Janelix-Setup-2.0.31.exe",
   "notes": [
-    "Botão Enviar sugestão sempre à vista na barra de cima: abre direto o formulário de sugestões, críticas e ideias.",
-    "Correção: o cadastro agora confere o setor também ao concluir, não só na tela."
+    "Sugestões: quem mandou e o administrador podem apagar, e cada sugestão some sozinha 7 dias depois de enviada.",
+    "Desligar alguém ficou mais simples: basta escrever desligar e confirmar, sem digitar o nome.",
+    "Barra de cima mais limpa: a sugestão virou uma lâmpada e o tema foi para a barra da esquerda, embaixo.",
+    "Administrador: a lâmpada mostra quantas sugestões chegaram e de quem."
   ],
   "sizeMB": 114
 }
