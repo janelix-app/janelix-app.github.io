@@ -1,15 +1,11 @@
 {
-  "version": "2.0.40",
+  "version": "2.0.41",
   "date": "2026-11-01",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.40/Janelix-Setup-2.0.40.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.41/Janelix-Setup-2.0.41.exe",
   "notes": [
-    "Tela inicial mais limpa: sem o logo repetido na lateral, e novo modelo de vidro nos botões. Em Configurações, escolha entre Vidro e Padrão.",
-    "O painel de Acompanhamento só abre quando você clica.",
-    "O tamanho da tela agora fica em Configurações. Ctrl + e Ctrl − continuam funcionando.",
-    "Histórico de conversas: guarda só conversas individuais, sem grupos, e a mesma pessoa não fica mais dividida em duas conversas.",
-    "Transcrição: um áudio não pega mais o texto do áudio seguinte.",
-    "Etiquetas: com dois contatos de mesmo nome, o Janelix avisa em vez de marcar o contato errado."
+    "Botões mais limpos no modelo Padrão. O balão de vidro fica no modelo Vidro, em Configurações.",
+    "Avisos e listas com visual mais leve."
   ],
   "sizeMB": 114
 }
