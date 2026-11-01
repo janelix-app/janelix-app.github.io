@@ -1,11 +1,11 @@
 {
-  "version": "2.0.41",
+  "version": "2.0.42",
   "date": "2026-11-01",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.41/Janelix-Setup-2.0.41.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.42/Janelix-Setup-2.0.42.exe",
   "notes": [
-    "Botões mais limpos no modelo Padrão. O balão de vidro fica no modelo Vidro, em Configurações.",
-    "Avisos e listas com visual mais leve."
+    "Copiar a conversa: ao selecionar duas ou mais mensagens, cada linha sai com data, hora e nome, e os áudios saem com o texto transcrito.",
+    "Histórico: botão Copiar conversa, com data, hora e nome em cada mensagem."
   ],
   "sizeMB": 114
 }
