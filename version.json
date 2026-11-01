@@ -1,11 +1,10 @@
 {
-  "version": "2.0.36",
+  "version": "2.0.37",
   "date": "2026-11-01",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.36/Janelix-Setup-2.0.36.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.37/Janelix-Setup-2.0.37.exe",
   "notes": [
-    "Frases do dia mais fortes e motivadoras.",
-    "Histórico de conversas: aceita mais formatos de mensagem do WhatsApp."
+    "Empresa: o administrador pode mudar o nome de um setor, e o novo nome vale para todos."
   ],
   "sizeMB": 114
 }
