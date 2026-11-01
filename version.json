@@ -1,10 +1,11 @@
 {
-  "version": "2.0.29",
+  "version": "2.0.30",
   "date": "2026-11-01",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.29/Janelix-Setup-2.0.29.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.30/Janelix-Setup-2.0.30.exe",
   "notes": [
-    "Ligações: volta a gravar. O WhatsApp mudou o jeito de usar o áudio, e o Janelix descartava a ligação."
+    "Botão Enviar sugestão sempre à vista na barra de cima: abre direto o formulário de sugestões, críticas e ideias.",
+    "Correção: o cadastro agora confere o setor também ao concluir, não só na tela."
   ],
   "sizeMB": 114
 }
