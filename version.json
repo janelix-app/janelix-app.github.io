@@ -1,10 +1,11 @@
 {
-  "version": "2.0.37",
+  "version": "2.0.38",
   "date": "2026-11-01",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.37/Janelix-Setup-2.0.37.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.38/Janelix-Setup-2.0.38.exe",
   "notes": [
-    "Empresa: o administrador pode mudar o nome de um setor, e o novo nome vale para todos."
+    "Link de envio: a contagem do dia agora sobe a cada mensagem enviada, em todas as contas.",
+    "Histórico de conversas: as mensagens voltaram a ser guardadas."
   ],
   "sizeMB": 114
 }
