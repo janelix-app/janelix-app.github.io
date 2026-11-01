@@ -1,10 +1,11 @@
 {
-  "version": "2.0.34",
+  "version": "2.0.35",
   "date": "2026-11-01",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.34/Janelix-Setup-2.0.34.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.35/Janelix-Setup-2.0.35.exe",
   "notes": [
-    "Link de envio: o resultado da Nova conversa é reconhecido melhor, e o número abre mesmo quando a lista do WhatsApp não mostra a linha."
+    "Link de envio: a contagem do dia agora registra também o envio feito logo que a mensagem aparece.",
+    "Contas: a foto de perfil vem certa e mais rápido, sem o ícone da Meta AI no lugar dela."
   ],
   "sizeMB": 114
 }
