@@ -1,11 +1,11 @@
 {
-  "version": "2.0.35",
+  "version": "2.0.36",
   "date": "2026-11-01",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.35/Janelix-Setup-2.0.35.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.36/Janelix-Setup-2.0.36.exe",
   "notes": [
-    "Link de envio: a contagem do dia agora registra também o envio feito logo que a mensagem aparece.",
-    "Contas: a foto de perfil vem certa e mais rápido, sem o ícone da Meta AI no lugar dela."
+    "Frases do dia mais fortes e motivadoras.",
+    "Histórico de conversas: aceita mais formatos de mensagem do WhatsApp."
   ],
   "sizeMB": 114
 }
