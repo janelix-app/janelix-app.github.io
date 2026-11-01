@@ -1,10 +1,10 @@
 {
-  "version": "2.0.33",
+  "version": "2.0.34",
   "date": "2026-11-01",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.33/Janelix-Setup-2.0.33.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.34/Janelix-Setup-2.0.34.exe",
   "notes": [
-    "O WhatsApp não recarrega mais ao abrir conversa por lembrete, mensagem agendada ou link wa.me: tudo abre na hora pela Nova conversa."
+    "Link de envio: o resultado da Nova conversa é reconhecido melhor, e o número abre mesmo quando a lista do WhatsApp não mostra a linha."
   ],
   "sizeMB": 114
 }
