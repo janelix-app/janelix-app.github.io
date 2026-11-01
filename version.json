@@ -1,10 +1,12 @@
 {
-  "version": "2.0.27",
-  "date": "2026-10-28",
+  "version": "2.0.28",
+  "date": "2026-11-01",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.27/Janelix-Setup-2.0.27.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.28/Janelix-Setup-2.0.28.exe",
   "notes": [
-    "Sugestões: o administrador recebe um aviso no Windows quando chega uma sugestão nova, e quem mandou recebe um aviso quando ela é respondida. Clicar no aviso abre direto em Sugestões."
+    "Site novo, com uma janela do Janelix funcionando na página.",
+    "Responder pela notificação: se a conversa não abrir em segundo plano, o Janelix vem para frente na conta certa.",
+    "Ligações: registro do que acontece em cada passo, para achar por que uma ligação não gravou."
   ],
   "sizeMB": 114
 }

@@ -12,7 +12,8 @@
     <meta name="theme-color" content="#060f26" />
     <meta name="color-scheme" content="dark" />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link rel="preload" href="assets/Nunito.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="apple-touch-icon" href="assets/icone-512.png" />
+    <link rel="preload" href="assets/Nunito.woff2" as="font" type="font/woff2" crossorigin />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Janelix" />
@@ -36,7 +37,10 @@
         "operatingSystem": "Windows 10, Windows 11",
         "applicationCategory": "BusinessApplication",
         "inLanguage": "pt-BR",
-        "url": "https://janelix-app.github.io/"
+        "url": "https://janelix-app.github.io/",
+        "description": "Várias contas de WhatsApp Web numa janela só, para Windows.",
+        "image": "https://janelix-app.github.io/assets/prints/tema-azul.png",
+        "downloadUrl": "https://github.com/janelix-app/janelix-releases/releases/latest"
       }
     </script>
   </head>
@@ -81,39 +85,65 @@
         </div>
 
         <div class="palco" data-demo>
-          <ol class="demo-menu" aria-label="O que o Janelix faz">
-            <li data-foco="0.4 9 5.2 19" data-zoom="1.9" data-centro="0 18">
-              <button type="button"><span class="demo-t">Várias contas</span></button>
-              <p>Cada número de WhatsApp fica numa bolinha à esquerda. Um clique troca de conta. Se uma cair, o Janelix avisa e mostra a hora.</p>
-            </li>
-            <li data-foco="10 19.5 15 6.5" data-zoom="2.2" data-centro="18 23">
-              <button type="button"><span class="demo-t">Etiquetas com cor</span></button>
-              <p>Marque cada conversa: Cobrança, Em negociação, Pagamento. Você vê de longe em que pé está cada cliente.</p>
-            </li>
-            <li data-foco="34.3 24.3 25.4 15" data-zoom="1.9" data-centro="47 31">
-              <button type="button"><span class="demo-t">Áudio vira texto</span></button>
-              <p>O áudio do cliente aparece escrito dentro do balão. Tudo feito no seu computador: o áudio não vai para lugar nenhum.</p>
-            </li>
-            <li data-foco="74.4 12.5 24.4 46" data-zoom="1.6" data-centro="86 34">
-              <button type="button"><span class="demo-t">Lembretes</span></button>
-              <p>Marque dia e hora para falar com o cliente. O Janelix avisa 5 minutos antes e na hora, mesmo minimizado, e abre a conversa com a mensagem pronta. Quem envia é você.</p>
-            </li>
-            <li data-foco="0.6 93 4.6 6.4" data-zoom="2.2" data-centro="0 100">
-              <button type="button"><span class="demo-t">Ligações gravadas</span></button>
-              <p>O botão do telefone guarda as ligações. Dá para ouvir de novo, ler o que cada um falou e mandar a gravação numa conversa.</p>
-            </li>
-          </ol>
-          <div class="demo-tela">
-            <div class="demo-camera">
-              <img
-                class="janela-app"
-                src="assets/prints/tema-azul.png"
-                alt="O Janelix aberto: contas à esquerda, a conversa no centro com áudios em texto e o painel de lembretes à direita"
-                width="1440"
-                height="900"
-                fetchpriority="high"
-              />
-              <span class="demo-foco" aria-hidden="true"></span>
+          <div class="demo-lado">
+            <ol class="demo-menu" aria-label="O que o Janelix faz">
+              <li>
+                <button type="button" aria-controls="cena-0"><span class="demo-t">Várias contas</span></button>
+                <p id="cena-0">Cada número de WhatsApp fica numa bolinha à esquerda. O número em cima mostra as mensagens novas, e um clique troca de conta.</p>
+              </li>
+              <li>
+                <button type="button" aria-controls="cena-1"><span class="demo-t">Etiquetas com cor</span></button>
+                <p id="cena-1">Marque cada conversa: Cliente, Em negociação, Pagamento. Você vê de longe em que pé está cada cliente.</p>
+              </li>
+              <li>
+                <button type="button" aria-controls="cena-2"><span class="demo-t">Áudio vira texto</span></button>
+                <p id="cena-2">O áudio do cliente aparece escrito dentro do balão. Tudo feito no seu computador: o áudio não vai para lugar nenhum.</p>
+              </li>
+              <li>
+                <button type="button" aria-controls="cena-3"><span class="demo-t">Aviso de cada conta</span></button>
+                <p id="cena-3">Chegou mensagem em outra conta? O aviso do Windows mostra quem mandou e em qual conta. Um clique abre a conversa.</p>
+              </li>
+              <li>
+                <button type="button" aria-controls="cena-4"><span class="demo-t">Ligações gravadas</span></button>
+                <p id="cena-4">Quando a ligação conecta, o Janelix grava e mostra com quem e há quanto tempo. Depois dá para ouvir e ler o que cada um falou.</p>
+              </li>
+              <li>
+                <button type="button" aria-controls="cena-5"><span class="demo-t">Lembrete na hora certa</span></button>
+                <p id="cena-5">O Janelix avisa 5 minutos antes e abre a conversa com a mensagem pronta. Quem envia é você.</p>
+              </li>
+            </ol>
+            <button type="button" class="demo-pausa" aria-pressed="false" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14" /></svg><span>Pausar</span>
+            </button>
+          </div>
+
+          <!-- a janela viva: um Janelix de mentira, montado na própria página (sem dados reais) -->
+          <div class="vivo" role="img" aria-label="Demonstração animada do Janelix: contas à esquerda, lista de conversas e a conversa aberta, com áudio virando texto, aviso do Windows, gravação de ligação e lembrete.">
+            <div class="app" aria-hidden="true">
+              <div class="app-topo">
+                <img class="app-logo" src="assets/logo.svg" alt="" width="22" height="22" />
+                <span class="app-nome"><span>Janel<b>ix</b></span><small>Criado por Matheus</small></span>
+                <span class="app-frase"><strong>Olá, Ana!</strong> Cada cliente bem atendido conta.</span>
+                <span class="app-rec" data-rec><i></i>Gravando ligação <b data-rec-t>00:00</b><span class="app-rec-quem">Maria Silva</span></span>
+              </div>
+              <div class="app-corpo">
+                <div class="app-trilho" data-trilho></div>
+                <div class="app-lista">
+                  <div class="app-busca">Pesquisar ou começar uma conversa</div>
+                  <ul data-lista></ul>
+                </div>
+                <div class="app-chat">
+                  <div class="chat-topo"><span class="av" data-chat-av>MS</span><span><strong data-chat-nome>Maria Silva</strong><small>online</small></span></div>
+                  <div class="chat-msgs" data-msgs></div>
+                  <div class="chat-campo"><span data-campo>Digite uma mensagem</span></div>
+                </div>
+              </div>
+              <div class="aviso" data-aviso>
+                <div class="aviso-cab"><img src="assets/logo.svg" alt="" width="14" height="14" />Janelix</div>
+                <strong data-aviso-t></strong>
+                <p data-aviso-b></p>
+                <small data-aviso-c></small>
+              </div>
             </div>
           </div>
         </div>
@@ -232,9 +262,6 @@
                   <li>Na hora de criar a conta, você escolhe o seu setor. Para mudar depois, é só falar com o seu gerente.</li>
                   <li>Entrou uma vez, o Janelix lembra: nas próximas vezes abre direto nas conversas.</li>
                   <li>Quem já usava não perde nada: contas do WhatsApp e dados continuam no computador.</li>
-                  <li>Todo dia aparece uma frase nova para começar bem.</li>
-                  <li>Ponha sua foto: ela aparece no canto de cima. Sem foto, aparecem suas iniciais.</li>
-                  <li>Na primeira vez, um passeio rápido mostra cada função e como usar. Dá para ver de novo em Configurações › Sobre.</li>
                 </ul>
               </div>
             </li>
@@ -337,7 +364,7 @@
                 </div>
                 <div>
                   <dt>Notificações</dt>
-                  <dd>Mostram a foto de quem mandou. Responda direto no aviso do Windows, sem abrir o Janelix: escreva e clique em Responder. Dá para esconder o texto da mensagem, tirar o som ou silenciar só uma conta.</dd>
+                  <dd>Mostram a foto de quem mandou, e um clique abre a conversa. Dá para esconder o texto da mensagem, tirar o som ou silenciar só uma conta.</dd>
                 </div>
                 <div>
                   <dt>Etiquetas e acompanhamento</dt>
@@ -359,7 +386,7 @@
               <dl>
                 <div>
                   <dt>Uma conta para cada pessoa</dt>
-                  <dd>Cada operador entra com o próprio login e senha. A senha pode ser só números, como a do sistema: basta ter pelo menos 6 caracteres. Você entra uma vez e o Janelix lembra. Todo dia aparece uma frase para começar bem.</dd>
+                  <dd>Cada operador entra com o próprio login e senha. A senha pode ser só números, como a do sistema: basta ter pelo menos 6 caracteres. Você entra uma vez e o Janelix lembra. Todo dia aparece uma frase para começar bem, dá para pôr sua foto no canto de cima e, na primeira vez, um passeio rápido mostra cada função.</dd>
                 </div>
                 <div>
                   <dt>Bloqueio por senha</dt>
@@ -443,26 +470,6 @@
         </div>
       </section>
 
-      <!-- download final + novidades -->
-      <section class="final" aria-labelledby="t-final">
-        <div class="wrap final-grade">
-          <div>
-            <h2 id="t-final">Pronto para testar?</h2>
-            <p class="final-lead">Baixe, abra e conecte as contas. O Janelix cuida das atualizações.</p>
-            <a class="btn btn-principal baixar" href="https://github.com/janelix-app/janelix-releases/releases/latest">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M5 21h14" /></svg>
-              Baixar o Janelix
-            </a>
-            <p class="final-req">Para Windows 10 e 11 · atualiza sozinho</p>
-          </div>
-          <div class="novidades">
-            <h3>Novidades da versão <span id="v-num">2.0.27</span></h3>
-            <ul id="notas">
-              <li>Sugestões: o administrador recebe um aviso no Windows quando chega uma sugestão nova, e quem mandou recebe um aviso quando ela é respondida. Clicar no aviso abre direto em Sugestões.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
 
       <!-- link para sistemas -->
       <section class="sistemas" id="para-sistemas" aria-labelledby="t-sistemas">
@@ -488,8 +495,8 @@
               </li>
             </ol>
 
-            <div class="dev">
-              <h3>Para quem cuida do sistema</h3>
+            <details class="dev">
+              <summary>Para quem cuida do sistema</summary>
               <p>O botão é um link neste formato:</p>
               <pre><code>janelix://enviar?telefone=5518999990000&amp;texto=Ol%C3%A1%2C%20Maria</code></pre>
               <ul>
@@ -497,7 +504,7 @@
                 <li><strong>texto</strong>: a mensagem codificada para link (em JavaScript, <code>encodeURIComponent</code>). O sinal de mais vai como <code>%2B</code>. Até 2.000 letras.</li>
                 <li>Se o Janelix não estiver instalado, o link não abre nada. Coloque ao lado do botão: “Não abriu? <a href="https://janelix-app.github.io">Baixe o Janelix</a>”.</li>
               </ul>
-            </div>
+            </details>
           </div>
         </div>
       </section>
@@ -531,6 +538,33 @@
               <summary>O Windows mostrou um aviso ao abrir o instalador. E agora?</summary>
               <p>Clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>. O aviso aparece porque o Windows ainda não conhece o Janelix. <a href="#instalar">Veja o passo a passo</a>.</p>
             </details>
+          </div>
+        </div>
+      </section>
+      <!-- download final + novidades -->
+      <section class="final" aria-labelledby="t-final">
+        <div class="wrap final-grade">
+          <div>
+            <h2 id="t-final">Pronto para testar?</h2>
+            <p class="final-lead">Baixe, abra e conecte as contas. O Janelix cuida das atualizações.</p>
+            <a class="btn btn-principal baixar" href="https://github.com/janelix-app/janelix-releases/releases/latest">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M5 21h14" /></svg>
+              Baixar o Janelix
+            </a>
+            <ul class="garantias" role="list">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Áudio vira texto no seu computador</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Nunca envia mensagem sozinho</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Atualiza sozinho</li>
+            </ul>
+            <p class="final-req">Para Windows 10 e 11</p>
+          </div>
+          <div class="novidades">
+            <h3>Novidades da versão <span id="v-num">2.0.28</span></h3>
+            <ul id="notas">
+              <li>Site novo, com uma janela do Janelix funcionando na página.</li>
+              <li>Responder pela notificação: se a conversa não abrir em segundo plano, o Janelix vem para frente na conta certa.</li>
+              <li>Ligações: registro do que acontece em cada passo, para achar por que uma ligação não gravou.</li>
+            </ul>
           </div>
         </div>
       </section>

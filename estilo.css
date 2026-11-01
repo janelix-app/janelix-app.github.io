@@ -2,7 +2,7 @@
  * uma janela ao carregar (o único movimento autoral); cada print vem com a explicação ao lado. */
 @font-face {
   font-family: 'Nunito';
-  src: url('assets/Nunito.ttf') format('truetype');
+  src: url('assets/Nunito.woff2') format('woff2');
   font-weight: 200 1000;
   font-display: swap;
 }
@@ -54,17 +54,21 @@ body {
 a {
   color: var(--brand-ink);
   text-decoration-thickness: 1px;
+  text-decoration-color: rgba(138, 180, 255, 0.45);
   text-underline-offset: 4px;
+  transition:
+    color 150ms ease,
+    text-decoration-color 150ms ease;
 }
 
 a:hover {
   color: var(--text);
+  text-decoration-color: currentColor;
 }
 
 :focus-visible {
   outline: 3px solid var(--brand-ink);
   outline-offset: 3px;
-  border-radius: 6px;
 }
 
 img {
@@ -214,9 +218,9 @@ code {
   text-decoration: none;
   border: 1px solid transparent;
   transition:
-    transform 0.3s var(--ease),
-    box-shadow 0.3s var(--ease),
-    background-color 0.2s;
+    transform 150ms var(--ease),
+    box-shadow 200ms var(--ease),
+    background-color 150ms ease;
 }
 
 .btn svg {
@@ -234,22 +238,23 @@ code {
     0 12px 28px -8px rgba(0, 0, 0, 0.6);
 }
 
-.btn-principal:hover {
-  background: var(--brand-hover);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.22) inset,
-    0 18px 36px -10px rgba(0, 0, 0, 0.7);
-}
+@media (hover: hover) {
+  .btn-principal:hover {
+    background: var(--brand-hover);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.22) inset,
+      0 18px 36px -10px rgba(0, 0, 0, 0.7);
+  }
 
-.btn-principal:hover svg {
-  transform: translateY(2px);
+  .btn-principal:hover svg {
+    transform: translateY(2px);
+  }
 }
 
 .btn:active {
-  transform: translateY(0) scale(0.98);
-  transition-duration: 0.08s;
+  transform: scale(0.96);
 }
 
 .btn-mini {
@@ -276,9 +281,8 @@ code {
 
 .hero-grade {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 32px clamp(40px, 5vw, 72px);
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
 }
 
 .hero-texto {
@@ -291,8 +295,8 @@ code {
   max-width: 22ch;
   font-size: clamp(38px, 4.4vw, 64px);
   font-weight: 900;
-  line-height: 1.02;
-  letter-spacing: -0.035em;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 
@@ -310,9 +314,10 @@ code {
 }
 
 .baixar-bloco {
-  display: grid;
-  justify-items: start;
-  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
 }
 
 .versao,
@@ -333,10 +338,10 @@ code {
   font-weight: 700;
 }
 
-/* ------------------------------------------------------------ demonstração da abertura
- * Um "vídeo" feito com o print: o menu à esquerda passa sozinho pelas funções e a câmera
- * aproxima a parte da janela que cada uma explica, com um destaque iluminado em volta.
- * Sem script, o menu mostra todas as explicações e o print fica parado. */
+/* ------------------------------------------------------------ janela viva
+ * Um Janelix de mentira, feito com HTML: o menu à esquerda passa pelas cenas (uma por função)
+ * e a janela mostra cada uma acontecendo. A janela tem 920 × 580 px e encolhe por inteiro
+ * (--s, calculado no script) para caber na coluna. Sem script, fica parada na tela inicial. */
 .palco {
   max-width: 1200px;
   margin: clamp(32px, 3.5vw, 48px) auto clamp(48px, 6vw, 80px);
@@ -346,9 +351,14 @@ code {
   align-items: center;
 }
 
+.demo-lado {
+  display: grid;
+  gap: 12px;
+}
+
 .demo-menu {
   display: grid;
-  gap: 6px;
+  gap: 4px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -357,20 +367,21 @@ code {
 .demo-menu li {
   position: relative;
   border-radius: 14px;
-  transition: background-color 0.3s;
+  transition: background-color 300ms ease;
 }
 
 .demo-menu button {
   display: block;
   width: 100%;
-  padding: 14px 18px;
+  padding: 12px 18px;
   border: 0;
+  border-radius: 14px;
   background: none;
   color: var(--text-2);
   font: 800 18px/1.3 var(--font);
   text-align: left;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: color 200ms ease;
 }
 
 .demo-menu button:hover {
@@ -378,123 +389,624 @@ code {
 }
 
 .demo-menu p {
-  margin: -6px 0 0;
+  margin: -4px 0 0;
   padding: 0 18px 16px;
   color: var(--text-2);
-  font-size: 15.5px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
-.js .demo-menu p {
+.vivo-pronto .demo-menu p {
   max-height: 0;
   overflow: hidden;
   padding-bottom: 0;
   opacity: 0;
   transition:
-    max-height 0.5s var(--ease),
-    opacity 0.4s,
-    padding 0.5s var(--ease);
+    max-height 500ms var(--ease),
+    opacity 400ms ease,
+    padding 500ms var(--ease);
 }
 
-.js .demo-menu li.ativo {
+.vivo-pronto .demo-menu li.ativo {
   background: var(--surface);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-.js .demo-menu li.ativo button {
+.vivo-pronto .demo-menu li.ativo button {
   color: var(--text);
 }
 
-.js .demo-menu li.ativo p {
+.vivo-pronto .demo-menu li.ativo p {
   max-height: 160px;
-  padding-bottom: 18px;
+  padding-bottom: 16px;
   opacity: 1;
 }
 
-/* barra de tempo da função que está passando */
-.demo-menu li::after {
+/* a função que está passando ganha um traço azul à esquerda */
+.demo-menu li::before {
   content: '';
   position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 0;
-  height: 3px;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 3px;
   border-radius: 3px;
   background: var(--brand);
+  transform: scaleY(0);
+  transition: transform 400ms var(--ease);
+}
+
+.vivo-pronto .demo-menu li.ativo::before {
+  transform: scaleY(1);
+}
+
+.demo-pausa {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 12px;
+  padding: 6px 12px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-3);
+  font: 700 14px/20px var(--font);
+  cursor: pointer;
+  transition:
+    color 150ms ease,
+    border-color 150ms ease;
+}
+
+.demo-pausa[hidden] {
+  display: none;
+}
+
+.demo-pausa:hover {
+  color: var(--text);
+  border-color: var(--brand-ink);
+}
+
+.demo-pausa svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* moldura: a janela flutua com brilho azul por trás */
+.vivo {
+  position: relative;
+  aspect-ratio: 920 / 580;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0b141a;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 0 0 1px rgba(138, 180, 255, 0.14),
+    0 40px 90px -30px rgba(0, 0, 0, 0.9),
+    0 0 120px -20px rgba(31, 107, 255, 0.35);
+}
+
+.app {
+  --wa: #0b141a;
+  --wa-2: #111b21;
+  --wa-3: #202c33;
+  --wa-out: #005c4b;
+  --wa-txt: #e9edef;
+  --wa-sub: #8696a0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 920px;
+  height: 580px;
+  display: grid;
+  grid-template-rows: 48px minmax(0, 1fr);
+  transform: scale(var(--s, 1));
+  transform-origin: 0 0;
+  font: 400 14px/1.4 var(--font);
+  color: var(--wa-txt);
+  background: var(--wa);
+  user-select: none;
+}
+
+/* barra de cima do Janelix */
+.app-topo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  background: #0a1734;
+  border-bottom: 1px solid #1c3166;
+}
+
+.app-nome {
+  display: grid;
+  gap: 3px;
+  font: 900 15px/1 var(--font);
+  color: #fff;
+}
+
+.app-nome b {
+  color: var(--brand-ink);
+}
+
+.app-nome small {
+  font: 600 9.5px/1 var(--font);
+  color: var(--wa-sub);
+}
+
+.app-frase {
+  margin-left: 18px;
+  font-size: 12.5px;
+  color: #b9c7ea;
+  white-space: nowrap;
+}
+
+.app-frase strong {
+  color: #fff;
+}
+
+.app-rec {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #b4233c;
+  color: #fff;
+  font: 700 12.5px/1 var(--font);
+  opacity: 0;
+  transform: translateY(-6px) scale(0.96);
+  transition:
+    opacity 300ms ease,
+    transform 400ms var(--ease);
+}
+
+.app-rec.ligado {
+  opacity: 1;
+  transform: none;
+}
+
+.app-rec i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  animation: pisca 1.2s ease-in-out infinite;
+}
+
+.app-rec b {
+  font-variant-numeric: tabular-nums;
+}
+
+.app-rec-quem {
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+@keyframes pisca {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.app-corpo {
+  display: grid;
+  grid-template-columns: 60px 260px minmax(0, 1fr);
+  min-height: 0;
+}
+
+/* contas (as bolinhas da esquerda) */
+.app-trilho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-top: 14px;
+  background: #0a1734;
+  border-right: 1px solid #1c3166;
+}
+
+.conta {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--c);
+  color: #fff;
+  font: 800 13px/1 var(--font);
+  opacity: 0.55;
+  transition:
+    opacity 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.conta.ativa {
+  opacity: 1;
+  box-shadow:
+    0 0 0 2px #0a1734,
+    0 0 0 4px var(--c);
+}
+
+.conta-n {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: #25d366;
+  color: #062b17;
+  font: 800 11px/18px var(--font);
+  text-align: center;
+  animation: entra-pop 400ms var(--ease);
+}
+
+.conta-add {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px dashed #2b4687;
+  color: #9aadd9;
+  font: 600 20px/1 var(--font);
+}
+
+/* lista de conversas */
+.app-lista {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  background: var(--wa-2);
+  border-right: 1px solid #222d34;
+  min-height: 0;
+}
+
+.app-busca {
+  margin: 10px 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--wa-3);
+  color: var(--wa-sub);
+  font-size: 12.5px;
+}
+
+.app-lista ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.app-lista li {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #1d282f;
+  transition: background-color 300ms ease;
+}
+
+.app-lista li.aberta {
+  background: #2a3942;
+}
+
+.av {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--c, #6b7c85);
+  color: #fff;
+  font: 800 13px/1 var(--font);
+}
+
+.lista-meio {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.lista-linha {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.lista-linha strong {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lista-meio small {
+  color: var(--wa-sub);
+  font-size: 12.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lista-h {
+  align-self: start;
+  color: var(--wa-sub);
+  font-size: 11px;
+}
+
+.etq {
+  flex: none;
+  padding: 1px 7px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--c) 70%, transparent);
+  background: color-mix(in srgb, var(--c) 22%, transparent);
+  color: #fff;
+  font: 700 10.5px/16px var(--font);
+  white-space: nowrap;
+  animation: entra-pop 450ms var(--ease);
+}
+
+/* conversa aberta */
+.app-chat {
+  display: grid;
+  grid-template-rows: 56px minmax(0, 1fr) 56px;
+  min-height: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.02) 0 1px, transparent 2px) 0 0 / 22px 22px,
+    var(--wa);
+}
+
+.chat-topo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  background: var(--wa-3);
+}
+
+.chat-topo span:last-child {
+  display: grid;
+}
+
+.chat-topo small {
+  color: var(--wa-sub);
+  font-size: 12px;
+}
+
+.chat-msgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 16px 32px;
+  overflow: hidden;
+}
+
+.msg {
+  max-width: 68%;
+  margin: 0;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  animation: entra-msg 400ms var(--ease);
+}
+
+.msg.in {
+  align-self: flex-start;
+  background: var(--wa-3);
+  border-top-left-radius: 0;
+}
+
+.msg.out {
+  align-self: flex-end;
+  background: var(--wa-out);
+  border-top-right-radius: 0;
+}
+
+.msg.sistema {
+  align-self: center;
+  padding: 5px 12px;
+  background: #182229;
+  color: var(--wa-sub);
+  font-size: 12.5px;
+}
+
+/* mensagem de voz que vira texto */
+.msg.audio {
+  display: grid;
+  gap: 6px;
+  width: 340px;
+}
+
+.audio-linha {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.audio-play {
+  width: 0;
+  height: 0;
+  border-left: 11px solid var(--wa-sub);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.audio-barra {
+  position: relative;
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: #3b4a54;
+  overflow: hidden;
+}
+
+.audio-barra::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #53bdeb;
   transform: scaleX(0);
   transform-origin: left;
-  opacity: 0;
 }
 
-.js [data-demo].rodando li.ativo::after {
-  opacity: 1;
-  animation: tempo var(--tempo, 6s) linear forwards;
+.tocando .audio-barra::after {
+  transform: scaleX(1);
+  transition: transform 2000ms linear;
 }
 
-@keyframes tempo {
-  to {
-    transform: scaleX(1);
+.audio-linha small {
+  color: var(--wa-sub);
+  font-size: 11px;
+}
+
+.audio-txt {
+  padding-top: 6px;
+  border-top: 1px solid #2f3b43;
+  color: var(--wa-txt);
+  font-size: 13.5px;
+}
+
+/* campo de mensagem */
+.chat-campo {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: var(--wa-2);
+}
+
+.chat-campo span {
+  flex: 1;
+  padding: 9px 14px;
+  border-radius: 8px;
+  background: var(--wa-3);
+  color: var(--wa-sub);
+  font-size: 13.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-campo.cheio span {
+  color: var(--wa-txt);
+}
+
+/* o que a cena está mostrando ganha um brilho azul por um instante */
+.app .alvo {
+  animation: realce 1.6s var(--ease);
+}
+
+@keyframes realce {
+  0% {
+    box-shadow: 0 0 0 0 rgba(83, 189, 235, 0);
+  }
+  25% {
+    box-shadow: 0 0 0 3px rgba(83, 189, 235, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(83, 189, 235, 0);
   }
 }
 
-.demo-tela {
-  position: relative;
-  overflow: hidden;
-  border-radius: 14px;
-  border: 1px solid var(--line-2);
-  box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.8);
+@keyframes entra-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
 }
 
-.demo-camera {
-  position: relative;
-  transform-origin: var(--cx, 50%) var(--cy, 50%);
-  transform: scale(var(--zoom, 1));
-  transition:
-    transform 1.3s var(--ease),
-    transform-origin 1.3s var(--ease);
+@keyframes entra-msg {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
 }
 
-.janela-app {
-  width: 100%;
-}
-
-/* destaque: o resto da janela escurece e a parte explicada fica com uma moldura */
-.demo-foco {
+/* aviso do Windows, no canto de baixo */
+.aviso {
   position: absolute;
-  left: var(--fx, 0);
-  top: var(--fy, 0);
-  width: var(--fw, 100%);
-  height: var(--fh, 100%);
-  border: 2px solid var(--brand-ink);
-  border-radius: 8px;
-  box-shadow: 0 0 0 200vmax rgba(6, 15, 38, 0.55);
+  right: 18px;
+  bottom: 18px;
+  width: 340px;
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  background: #2b2b2b;
+  border: 1px solid #3d3d3d;
+  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-family: 'Segoe UI', var(--font);
   opacity: 0;
+  transform: translateX(40px);
   pointer-events: none;
   transition:
-    left 1.3s var(--ease),
-    top 1.3s var(--ease),
-    width 1.3s var(--ease),
-    height 1.3s var(--ease),
-    opacity 0.5s;
+    opacity 300ms ease,
+    transform 450ms var(--ease);
 }
 
-[data-demo].focando .demo-foco {
+.aviso.aberto {
   opacity: 1;
+  transform: none;
 }
 
-/* a janela se abre do centro para os lados ao carregar */
-@keyframes abre-janela {
-  from {
-    clip-path: inset(0 50% 0 50% round 14px 14px 0 0);
-    opacity: 0.3;
+.aviso.saindo {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.aviso-cab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  color: #c8c8c8;
+  font-size: 11.5px;
+}
+
+.aviso strong {
+  font-size: 14px;
+}
+
+.aviso p {
+  margin: 0;
+  color: #e6e6e6;
+  font-size: 13px;
+}
+
+.aviso small {
+  color: #a8a8a8;
+  font-size: 11.5px;
+}
+
+@media (max-width: 720px) {
+  .palco {
+    grid-template-columns: minmax(0, 1fr);
   }
-  to {
-    clip-path: inset(0 0 0 0 round 14px 14px 0 0);
-    opacity: 1;
+
+  .demo-lado {
+    order: 2;
   }
 }
 
-.js .janela-app {
-  animation: abre-janela 1.3s var(--ease) 0.15s both;
+@media (prefers-reduced-motion: reduce) {
+  .app *,
+  .app .alvo {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 /* ------------------------------------------------------------ cabeças de seção */
@@ -508,10 +1020,10 @@ code {
 .final h2,
 .perguntas h2 {
   margin: 0 0 14px;
-  font-size: clamp(32px, 4.4vw, 56px);
+  font-size: clamp(30px, 3.4vw, 46px);
   font-weight: 900;
-  line-height: 1.06;
-  letter-spacing: -0.03em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   text-wrap: balance;
 }
 
@@ -527,7 +1039,6 @@ code {
 .por-dentro {
   padding: 120px 40px;
   background: var(--bg-2);
-  border-top: 1px solid var(--line);
 }
 
 /* cada print com a explicação ao lado, alternando os lados */
@@ -554,16 +1065,20 @@ code {
   display: grid;
   place-items: center;
   margin: 0;
-  padding: clamp(16px, 3vw, 36px);
+  padding: clamp(12px, 2vw, 24px);
   border-radius: 14px;
-  border: 1px solid var(--line-2);
   background:
     radial-gradient(ellipse 70% 60% at 50% 45%, rgba(31, 107, 255, 0.12), transparent 75%),
     var(--stage);
-  box-shadow: 0 30px 70px -24px rgba(0, 0, 0, 0.75);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 0 0 1px rgba(138, 180, 255, 0.1),
+    0 30px 60px -30px rgba(0, 0, 0, 0.9);
 }
 
 .vitrine-print img {
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  outline-offset: -1px;
   width: auto;
   max-width: 100%;
   height: auto;
@@ -861,7 +1376,7 @@ code {
 
 /* ------------------------------------------------------------ final */
 .final {
-  padding: 120px 40px;
+  padding: clamp(120px, 12vw, 168px) 40px;
   background:
     radial-gradient(ellipse 50% 70% at 10% 100%, rgba(31, 107, 255, 0.2), transparent 70%),
     var(--bg);
@@ -869,9 +1384,9 @@ code {
 
 .final-grade {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
   gap: 48px clamp(40px, 6vw, 96px);
-  align-items: start;
+  align-items: center;
 }
 
 .final-lead {
@@ -930,10 +1445,15 @@ code {
   background: var(--bg);
 }
 
-.dev h3 {
-  margin: 0 0 10px;
-  font-size: 22px;
+.dev summary {
   color: var(--text);
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.dev[open] summary {
+  margin-bottom: 12px;
 }
 
 .dev p,
@@ -1038,7 +1558,8 @@ details p {
 
 /* ------------------------------------------------------------ rodapé */
 footer {
-  padding: 40px 0 48px;
+  padding: 56px 0 64px;
+  background: var(--bg);
   border-top: 1px solid var(--line);
   color: var(--text-3);
   font-size: 14px;
@@ -1176,18 +1697,26 @@ li {
     box-shadow 500ms var(--ease);
 }
 
-.vitrine > li:hover .vitrine-print,
-.cartao:hover .cartao-print {
-  transform: translateY(-4px);
-  border-color: #3a5aa8;
-  box-shadow: 0 40px 80px -28px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(31, 107, 255, 0.15);
+@media (hover: hover) {
+  .vitrine > li:hover .vitrine-print,
+  .cartao:hover .cartao-print {
+    transform: translateY(-4px);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 0 0 1px rgba(138, 180, 255, 0.22),
+      0 40px 80px -28px rgba(0, 0, 0, 0.9);
+  }
 }
 
 /* "E mais": as outras funções em cartões */
 .mosaico-titulo {
-  margin: clamp(80px, 10vw, 128px) 0 32px;
-  font-size: clamp(24px, 2.6vw, 30px);
-  line-height: 1.2;
+  margin: clamp(72px, 8vw, 104px) 0 24px;
+  color: var(--brand-ink);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .mosaico {
@@ -1203,7 +1732,10 @@ li {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 14px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 20px 40px -24px rgba(0, 0, 0, 0.8);
   background: var(--surface);
   overflow: hidden;
 }
@@ -1277,9 +1809,8 @@ li {
 
 /* frase de impacto: cada palavra acende ao rolar */
 .frase {
-  padding: clamp(96px, 14vw, 176px) 40px;
+  padding: clamp(72px, 9vw, 120px) 40px;
   background: var(--bg);
-  border-top: 1px solid var(--line);
 }
 
 .frase-texto {
@@ -1330,6 +1861,20 @@ li {
   .cartao:hover .cartao-print {
     transform: none;
   }
+}
+
+/* entrada ao rolar: a classe só existe com script e sem o pedido de menos movimento */
+.revela {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 600ms var(--ease) var(--atraso, 0ms),
+    transform 600ms var(--ease) var(--atraso, 0ms);
+}
+
+.revela.visto {
+  opacity: 1;
+  transform: none;
 }
 
 /* ------------------------------------------------------------ telas menores */
@@ -1395,6 +1940,10 @@ main.wrap {
     padding: 72px 16px;
   }
 
+  .final-grade {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .faixa {
     padding: 56px 16px;
   }
@@ -1411,15 +1960,6 @@ main.wrap {
   .baixar-bloco .btn,
   .final .btn {
     width: 100%;
-  }
-
-  /* no celular o menu vai para baixo da janela */
-  .palco {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .demo-menu {
-    order: 2;
   }
 
   .passos li {
@@ -1441,13 +1981,7 @@ main.wrap {
     scroll-behavior: auto;
   }
 
-  .js .janela-app {
-    animation: none;
-  }
-
-  .demo-camera,
-  .demo-foco,
-  .js .demo-menu p {
+  .vivo-pronto .demo-menu p {
     transition-duration: 0.01s;
   }
   .btn,
