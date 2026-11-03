@@ -1,10 +1,12 @@
 {
-  "version": "2.0.43",
+  "version": "2.0.44",
   "date": "2026-11-03",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.43/Janelix-Setup-2.0.43.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.44/Janelix-Setup-2.0.44.exe",
   "notes": [
-    "Correção: na transcrição, valores falados em reais saem certos, como R$ 2.231,40."
+    "Correção: Copiar conversa põe a data e o nome certos nos áudios e não copia duas vezes no clique duplo.",
+    "Correção: o histórico não perde mensagens enviadas no mesmo horário.",
+    "Correção: o aviso do Windows não tem mais o campo Responder, que não funcionava. Clicar no aviso continua abrindo a conversa."
   ],
   "sizeMB": 114
 }
