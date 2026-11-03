@@ -1,11 +1,10 @@
 {
-  "version": "2.0.45",
+  "version": "2.0.46",
   "date": "2026-11-03",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.45/Janelix-Setup-2.0.45.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.46/Janelix-Setup-2.0.46.exe",
   "notes": [
-    "Correção: ligar pelo Janelix volta a funcionar (o WhatsApp pedia para baixar o app para Windows).",
-    "Correção: Copiar conversa não põe nome em aviso do sistema e copia o texto certo em mensagem com citação."
+    "Correção: registro para descobrir por que o WhatsApp recusa a ligação pelo computador."
   ],
   "sizeMB": 114
 }
