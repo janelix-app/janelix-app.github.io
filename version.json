@@ -1,10 +1,10 @@
 {
-  "version": "2.0.47",
+  "version": "2.0.48",
   "date": "2026-11-03",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.47/Janelix-Setup-2.0.47.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.48/Janelix-Setup-2.0.48.exe",
   "notes": [
-    "Correção: registro do motor de ligação, para descobrir por que a ligação pelo computador não abre."
+    "Correção: agora dá para ligar pelo computador em todas as contas, inclusive nas que pediam para baixar o app do Windows."
   ],
   "sizeMB": 114
 }
