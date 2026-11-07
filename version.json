@@ -1,10 +1,10 @@
 {
-  "version": "2.0.53",
-  "date": "2026-11-05",
+  "version": "2.0.54",
+  "date": "2026-11-07",
   "minimumVersion": "2.0.0",
-  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.53/Janelix-Setup-2.0.53.exe",
+  "download": "https://github.com/janelix-app/janelix-releases/releases/download/v2.0.54/Janelix-Setup-2.0.54.exe",
   "notes": [
-    "Correção: as contas pararam de reconectar sozinhas."
+    "Novo para o administrador: aba Relatórios no painel Equipe, com os problemas do Janelix de cada pessoa."
   ],
   "sizeMB": 114
 }
